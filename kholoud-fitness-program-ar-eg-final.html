@@ -1,0 +1,2140 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رحلة لياقة خلود بعد الولادة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --blush: #F8E8E8;
+            --rose: #D4A5A5;
+            --dusty-rose: #C9B1B1;
+            --sage: #B8C9B8;
+            --cream: #FDF9F7;
+            --charcoal: #3D3D3D;
+            --soft-gold: #D4AF37;
+            --light-sage: #E8F0E8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cairo', 'Poppins', sans-serif;
+            background: var(--cream);
+            color: var(--charcoal);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* COVER PAGE */
+        .cover {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, var(--blush) 0%, var(--cream) 50%, var(--light-sage) 100%);
+            padding: 60px 40px;
+            border-radius: 30px;
+            margin-bottom: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cover::before {
+            content: "✿";
+            position: absolute;
+            top: 30px;
+            left: 40px;
+            font-size: 40px;
+            opacity: 0.3;
+            color: var(--rose);
+        }
+
+        .cover::after {
+            content: "✿";
+            position: absolute;
+            bottom: 30px;
+            right: 40px;
+            font-size: 40px;
+            opacity: 0.3;
+            color: var(--sage);
+        }
+
+        .cover h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            color: var(--charcoal);
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .cover .name {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.5rem;
+            color: var(--rose);
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+
+        .cover .subtitle {
+            font-size: 1.2rem;
+            color: var(--dusty-rose);
+            font-weight: 300;
+            max-width: 500px;
+            margin-bottom: 40px;
+        }
+
+        .cover .badge {
+            background: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            font-weight: 500;
+            color: var(--charcoal);
+        }
+
+        /* WELCOME SECTION */
+        .welcome {
+            background: white;
+            padding: 50px;
+            border-radius: 25px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+        }
+
+        .welcome h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--charcoal);
+            margin-bottom: 20px;
+        }
+
+        .welcome p {
+            font-size: 1.05rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .welcome .highlight {
+            background: linear-gradient(120deg, var(--blush) 0%, var(--blush) 100%);
+            padding: 25px 30px;
+            border-radius: 15px;
+            margin-top: 25px;
+            border-left: 4px solid var(--rose);
+        }
+
+        /* PROGRAM OVERVIEW */
+        .overview {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .overview-card {
+            background: white;
+            padding: 30px 25px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .overview-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .overview-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .overview-card h3 {
+            font-size: 1.1rem;
+            color: var(--charcoal);
+            margin-bottom: 8px;
+        }
+
+        .overview-card p {
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        /* SECTION HEADERS */
+        .section-header {
+            text-align: center;
+            padding: 60px 20px 40px;
+        }
+
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--charcoal);
+            margin-bottom: 10px;
+        }
+
+        .section-header .line {
+            width: 60px;
+            height: 3px;
+            background: var(--rose);
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            color: #888;
+            font-size: 1rem;
+        }
+
+        /* WORKOUT DAY CARD */
+        .day-card {
+            background: white;
+            border-radius: 30px;
+            overflow: hidden;
+            margin-bottom: 50px;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.08);
+        }
+
+        .day-header {
+            padding: 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        .day-header.upper { background: linear-gradient(135deg, var(--blush) 0%, #FDF5F5 100%); }
+        .day-header.lower { background: linear-gradient(135deg, var(--light-sage) 0%, #F5FAF5 100%); }
+        .day-header.core { background: linear-gradient(135deg, #F5F0E8 0%, #FFFBF5 100%); }
+        .day-header.recovery { background: linear-gradient(135deg, #E8F4F8 0%, #F5FCFF 100%); }
+
+        .day-header .day-number {
+            display: inline-block;
+            background: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--charcoal);
+            margin-bottom: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .day-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--charcoal);
+            margin-bottom: 10px;
+        }
+
+        .day-header p {
+            color: #777;
+            font-size: 0.95rem;
+        }
+
+        .day-content {
+            padding: 40px;
+        }
+
+        /* PHASE SECTIONS */
+        .phase {
+            margin-bottom: 40px;
+        }
+
+        .phase-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 25px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--blush);
+        }
+
+        .phase-title .emoji {
+            font-size: 1.5rem;
+        }
+
+        .phase-title h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--charcoal);
+        }
+
+        .phase-title .duration {
+            margin-left: auto;
+            background: var(--blush);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: var(--charcoal);
+        }
+
+        /* EXERCISE CARD */
+        .exercise {
+            background: var(--cream);
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            align-items: start;
+        }
+
+        .exercise-visual {
+            background: white;
+            border-radius: 15px;
+            height: 180px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 2px dashed var(--dusty-rose);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .exercise-visual img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 13px;
+        }
+
+        .exercise-visual .placeholder {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .exercise-visual .placeholder .icon {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            opacity: 0.5;
+        }
+
+        .exercise-visual .placeholder p {
+            font-size: 0.8rem;
+            color: #999;
+        }
+
+        .exercise-info h4 {
+            font-size: 1.15rem;
+            color: var(--charcoal);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .exercise-info .description {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .exercise-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .detail-tag {
+            background: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: var(--charcoal);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .cue-box {
+            background: white;
+            padding: 12px 15px;
+            border-radius: 12px;
+            margin-bottom: 10px;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .cue-box.breathing {
+            border-left: 3px solid var(--sage);
+        }
+
+        .cue-box.safety {
+            border-left: 3px solid var(--rose);
+        }
+
+        .cue-box .label {
+            font-weight: 600;
+            min-width: 70px;
+        }
+
+        /* SIMPLE EXERCISE LIST (for warm-up/cooldown) */
+        .simple-exercise-list {
+            display: grid;
+            gap: 12px;
+        }
+
+        .simple-exercise {
+            background: white;
+            padding: 18px 20px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .simple-exercise .number {
+            width: 32px;
+            height: 32px;
+            background: var(--blush);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--charcoal);
+        }
+
+        .simple-exercise .info {
+            flex: 1;
+        }
+
+        .simple-exercise .info h5 {
+            font-size: 0.95rem;
+            color: var(--charcoal);
+            margin-bottom: 3px;
+        }
+
+        .simple-exercise .info p {
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        .simple-exercise .duration {
+            font-size: 0.85rem;
+            color: var(--rose);
+            font-weight: 500;
+        }
+
+        /* GAMIFICATION */
+        .gamification {
+            background: linear-gradient(135deg, #FDF9F7 0%, var(--blush) 100%);
+            border-radius: 25px;
+            padding: 35px;
+            margin-top: 30px;
+        }
+
+        .gamification h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 25px;
+            color: var(--charcoal);
+        }
+
+        .checklist {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+
+        .checklist h4 {
+            font-size: 1rem;
+            margin-bottom: 15px;
+            color: var(--charcoal);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .check-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .check-item:last-child {
+            border-bottom: none;
+        }
+
+        .checkbox {
+            width: 24px;
+            height: 24px;
+            border: 2px solid var(--rose);
+            border-radius: 6px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .check-item span {
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        .streak-tracker {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .streak-tracker h4 {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            color: var(--charcoal);
+        }
+
+        .streak-levels {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .streak-level {
+            background: white;
+            padding: 20px 25px;
+            border-radius: 15px;
+            text-align: center;
+            min-width: 120px;
+        }
+
+        .streak-level .star {
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+        }
+
+        .streak-level .name {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--charcoal);
+            margin-bottom: 4px;
+        }
+
+        .streak-level .count {
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        /* SAFETY SECTION */
+        .safety-section {
+            background: white;
+            border-radius: 30px;
+            padding: 50px;
+            margin-bottom: 50px;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.08);
+        }
+
+        .safety-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--charcoal);
+        }
+
+        .safety-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .do-list, .avoid-list {
+            padding: 30px;
+            border-radius: 20px;
+        }
+
+        .do-list {
+            background: var(--light-sage);
+        }
+
+        .avoid-list {
+            background: #FFF0F0;
+        }
+
+        .do-list h3, .avoid-list h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .safety-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        .safety-item .icon {
+            font-size: 1.2rem;
+            line-height: 1.4;
+        }
+
+        .avoid-reason {
+            font-size: 0.85rem;
+            color: #888;
+            margin-left: 30px;
+            margin-top: 5px;
+            font-style: italic;
+        }
+
+        /* ACHIEVEMENTS */
+        .achievements {
+            background: linear-gradient(135deg, var(--blush) 0%, #FDF5F5 50%, var(--light-sage) 100%);
+            border-radius: 30px;
+            padding: 50px;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .achievements h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: var(--charcoal);
+        }
+
+        .badges {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .badge-card {
+            background: white;
+            padding: 30px 25px;
+            border-radius: 20px;
+            width: 180px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .badge-card .icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .badge-card h4 {
+            font-size: 1rem;
+            color: var(--charcoal);
+            margin-bottom: 8px;
+        }
+
+        .badge-card p {
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        /* نسخة الموبايل */
+        .mobile-section {
+            background: var(--charcoal);
+            border-radius: 30px;
+            padding: 50px;
+            color: white;
+            margin-bottom: 50px;
+        }
+
+        .mobile-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .mobile-section .subtitle {
+            text-align: center;
+            color: #aaa;
+            margin-bottom: 40px;
+            font-size: 0.9rem;
+        }
+
+        .phone-frame {
+            background: #2a2a2a;
+            border-radius: 30px;
+            padding: 20px;
+            max-width: 350px;
+            margin: 0 auto 30px;
+        }
+
+        .phone-screen {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            color: var(--charcoal);
+        }
+
+        .phone-day-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--blush);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .phone-phase {
+            margin-bottom: 20px;
+        }
+
+        .phone-phase h5 {
+            font-size: 0.85rem;
+            color: var(--rose);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .phone-exercise {
+            font-size: 0.85rem;
+            padding: 8px 0;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .phone-exercise:last-child {
+            border-bottom: none;
+        }
+
+        /* CLOSING */
+        .closing {
+            text-align: center;
+            padding: 60px 40px;
+            background: linear-gradient(135deg, var(--blush) 0%, var(--cream) 50%, var(--light-sage) 100%);
+            border-radius: 30px;
+            margin-bottom: 40px;
+        }
+
+        .closing .emoji {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        .closing h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--charcoal);
+            margin-bottom: 15px;
+        }
+
+        .closing p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 500px;
+            margin: 0 auto 30px;
+        }
+
+        .closing .signature {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.3rem;
+            color: var(--rose);
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, var(--blush) 0%, var(--blush) 100%);
+            padding: 25px 30px;
+            border-radius: 15px;
+            margin-top: 25px;
+            border-left: 4px solid var(--rose);
+        }
+
+        /* PRINT STYLES */
+        @media print {
+            .container {
+                max-width: 100%;
+            }
+            .day-card, .safety-section, .achievements {
+                break-inside: avoid;
+            }
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .exercise {
+                grid-template-columns: 1fr;
+            }
+            .safety-grid {
+                grid-template-columns: 1fr;
+            }
+            .cover h1 {
+                font-size: 2.5rem;
+            }
+            .cover .name {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <!-- COVER PAGE -->
+        <section class="cover">
+            <h1>برنامج معمول مخصوص لـ</h1>
+            <div class="name">Kholoud</div>
+            <p class="subtitle">رحلة لياقتك بعد الولادة — متصممة بحب وعِلم وكل اللي جسمك محتاجه دلوقتي.</p>
+            <div class="badge">🌸 برنامج قوة هادي لمدة 12 أسبوع</div>
+        </section>
+
+        <!-- WELCOME -->
+        <section class="welcome">
+            <h2>عزيزتي خلود،</h2>
+            <p>من خمس شهور، جسمك عمل حاجة عظيمة… جاب روح جديدة للدنيا. وده يستحق يتقدّر — مش يتستعجل.</p>
+            <p>البرنامج ده مش علشان “ترجعي زي الأول”. البرنامج ده علشان تتحركي لقدّام — أقوى، أوثق، وعلى تواصل حقيقي مع جسمك اللي شال البيبي.</p>
+            <p>كل تمرين هنا متختار على مقاس رحلتك: آمن على القيصرية وهي بتتعافى، مناسب للرضاعة، ومصمم يخليكي تحسي بقوتك تاني.</p>
+            <div class="highlight">
+                <strong>افتكري يا خلود:</strong> التقدم مش دايمًا خط مستقيم. في أيام هتحسي إنك صاروخ 🚀، وفي أيام الراحة هي التمرين. الاتنين صح… والاتنين جزء من رحلتك. 💕
+            </div>
+        </section>
+
+        <!-- PROGRAM OVERVIEW -->
+        <div class="section-header">
+            <h2>تقسيم الأسبوع بتاعك</h2>
+            <div class="line"></div>
+            <p>3 أيام تمرين + يوم ريكفري اختياري</p>
+        </div>
+
+        <div class="overview">
+            <div class="overview-card">
+                <div class="icon">💪</div>
+                <h3>اليوم 1</h3>
+                <p>تمارين الجزء العلوي</p>
+            </div>
+            <div class="overview-card">
+                <div class="icon">🍑</div>
+                <h3>اليوم 2</h3>
+                <p>تمارين الرجلين والأرداف</p>
+            </div>
+            <div class="overview-card">
+                <div class="icon">🔥</div>
+                <h3>اليوم 3</h3>
+                <p>كور + كارديو</p>
+            </div>
+            <div class="overview-card">
+                <div class="icon">🧘‍♀️</div>
+                <h3>اليوم 4</h3>
+                <p>مرونة وريكفري<br><small>(اختياري)</small></p>
+            </div>
+        </div>
+
+        <!-- C-SECTION SAFETY -->
+        <section class="safety-section">
+            <h2>🩺 دليل الأمان بعد القيصرية لخلود</h2>
+            
+            <div class="safety-grid">
+                <div class="do-list">
+                    <h3>✅ التمارين الآمنة ليكي</h3>
+                    <div class="safety-item">
+                        <span class="icon">🌉</span>
+                        <span><strong>رفع الحوض (Glute Bridge)</strong> — بيقوّي الأرداف ويفعّل الكور بهدوء</span>
+                    </div>
+                    <div class="safety-item">
+                        <span class="icon">🐕</span>
+                        <span><strong>تمرين بيرد دوج (Bird Dog)</strong> — ثبات ممتاز للضهر من غير ضغط على مكان الجرح</span>
+                    </div>
+                    <div class="safety-item">
+                        <span class="icon">🪲</span>
+                        <span><strong>تمرين ديد بَج (Dead Bug)</strong> — بيرجع الاتصال بين المخ وعضلات البطن بأمان</span>
+                    </div>
+                    <div class="safety-item">
+                        <span class="icon">📐</span>
+                        <span><strong>بلانك جانبي معدل (Modified Side Plank)</strong> — بيقوّي الجنب من غير إجهاد</span>
+                    </div>
+                    <div class="safety-item">
+                        <span class="icon">🌬️</span>
+                        <span><strong>تنفّس حجابي (Diaphragmatic Breathing)</strong> — أساس تعافي الكور</span>
+                    </div>
+                    <div class="safety-item">
+                        <span class="icon">🦵</span>
+                        <span><strong>تنشيط عضلات الحوض (Pelvic Floor Activation)</strong> — مهم جدًا لإعادة التوازن والثبات</span>
+                    </div>
+                </div>
+
+                <div class="avoid-list">
+                    <h3>⛔ لسه بدري عليهم يا خلود</h3>
+                    <div class="safety-item">
+                        <span class="icon">❌</span>
+                        <span><strong>تمارين البطن التقليدية (Crunch / Sit-ups)</strong></span>
+                    </div>
+                    <p class="avoid-reason">بيعمل ضغط زيادة جوه البطن على الأنسجة اللي لسه بتتعافى</p>
+                    
+                    <div class="safety-item">
+                        <span class="icon">❌</span>
+                        <span><strong>بلانك كامل لفترة طويلة (Full Plank)</strong></span>
+                    </div>
+                    <p class="avoid-reason">ممكن يضغط على خط البطن (linea alba) قبل ما يكون جاهز</p>
+                    
+                    <div class="safety-item">
+                        <span class="icon">❌</span>
+                        <span><strong>رفع الرجلين / V-Ups</strong></span>
+                    </div>
+                    <p class="avoid-reason">تقيل قوي على عضلات البطن العميقة في مرحلة التعافي</p>
+                    
+                    <div class="safety-item">
+                        <span class="icon">❌</span>
+                        <span><strong>أوزان تقيلة فوق الرأس (Heavy Overhead Lifts)</strong></span>
+                    </div>
+                    <p class="avoid-reason">ممكن يأثر على ثبات عضلات الحوض</p>
+                    
+                    <div class="safety-item">
+                        <span class="icon">❌</span>
+                        <span><strong>قفز أو كارديو عنيف (High-Impact Jumping)</strong></span>
+                    </div>
+                    <p class="avoid-reason">عضلات الحوض محتاجة وقت أكتر قبل أي صدمات قوية</p>
+                </div>
+            </div>
+
+            <div class="highlight" style="margin-top: 30px; background: #FFF9E6; border-left-color: #D4AF37;">
+                <strong>💛 ملاحظة مهمة لخلود:</strong> التمارين اللي بنأجلها دي مش للأبد — دي بس “لسه شوية”. جسمك بيتعافى بشكل جميل، وقريب هتكوني جاهزة لكل حاجة. ثقي في الرحلة.
+            </div>
+        </section>
+
+        <!-- اليوم 1: UPPER BODY -->
+        <div class="day-card">
+            <div class="day-header upper">
+                <span class="day-number">اليوم 1</span>
+                <h2>تمارين الجزء العلوي</h2>
+                <p>Build beautiful, functional strength in your arms, shoulders & back</p>
+            </div>
+
+            <div class="day-content">
+                <!-- WARM-UP -->
+                <div class="phase">
+                    <div class="phase-title">
+                        <span class="emoji">🔥</span>
+                        <h3>إحماء</h3>
+                        <span class="duration">5-8 min</span>
+                    </div>
+                    
+                    <div class="simple-exercise-list">
+                        <div class="simple-exercise">
+                            <span class="number">1</span>
+                            <div class="info">
+                                <h5>دوائر الدراع (Arm Circles)</h5>
+                                <p>Small to large circles, forward then backward</p>
+                            </div>
+                            <span class="duration">30 sec each</span>
+                        </div>
+                        <div class="simple-exercise">
+                            <span class="number">2</span>
+                            <div class="info">
+                                <h5>تمرين القطة/البقرة (Cat-Cow Stretch)</h5>
+                                <p>Gentle spinal movement on all fours</p>
+                            </div>
+                            <span class="duration">10 reps</span>
+                        </div>
+                        <div class="simple-exercise">
+                            <span class="number">3</span>
+                            <div class="info">
+                                <h5>ضغط على الحيطة (Wall Push-ups)</h5>
+                                <p>Light activation, hands on wall</p>
+                            </div>
+                            <span class="duration">10 reps</span>
+                        </div>
+                        <div class="simple-exercise">
+                            <span class="number">4</span>
+                            <div class="info">
+                                <h5>شد المطاط للخارج (Band Pull-Aparts)</h5>
+                                <p>Light resistance, open chest</p>
+                            </div>
+                            <span class="duration">15 reps</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MAIN WORKOUT -->
+                <div class="phase">
+                    <div class="phase-title">
+                        <span class="emoji">💪</span>
+                        <h3>التمرين الأساسي</h3>
+                        <span class="duration">35-40 min</span>
+                    </div>
+
+                    <!-- Exercise 1 -->
+                    <div class="exercise">
+                        <div class="exercise-visual">
+                            <div class="placeholder">
+                                <div class="icon">🏋️‍♀️</div>
+                                <p>SEATED DUMBBELL PRESS</p>
+                            </div>
+                        </div>
+                        <div class="exercise-info">
+                            <h4>1. ضغط كتف بالدامبل جلوس (Seated Dumbbell Shoulder Press)</h4>
+                            <p class="description">اقعدي مستقيمة على بنش بظهر. ارفعي الدامبل لفوق لحد ما يقربوا من بعض، وانزلي ببطء وتحكم.</p>
+                            <div class="exercise-details">
+                                <span class="detail-tag">🔄 3 sets</span>
+                                <span class="detail-tag">🎯 10-12 reps</span>
+                                <span class="detail-tag">⏱️ 60s rest</span>
+                            </div>
+                            <div class="cue-box breathing">
+                                <span class="label">التنفس:</span>
+                                <span>Exhale as you press up, inhale as you lower</span>
+                            </div>
+                            <div class="cue-box safety">
+                                <span class="label">قيصرية:</span>
+                                <span>Keep core gently braced, avoid arching lower back</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Exercise 2 -->
+                    <div class="exercise">
+                        <div class="exercise-visual">
+                            <div class="placeholder">
+                                <div class="icon">🚣‍♀️</div>
+                                <p>SEATED CABLE ROW</p>
+                            </div>
+                        </div>
+                        <div class="exercise-info">
+                            <h4>2. سحب كيبل جلوس (Seated Cable Row)</h4>
+                            <p class="description">اقعدي وحطي رجلك على القاعدة وركبتك مرتاحة. اسحبي المقبض لحد أسفل الصدر واعصري لوح الكتف، وارجعي ببطء.</p>
+                            <div class="exercise-details">
+                                <span class="detail-tag">🔄 3 sets</span>
+                                <span class="detail-tag">🎯 12 reps</span>
+                                <span class="detail-tag">⏱️ 60s rest</span>
+                            </div>
+                            <div class="cue-box breathing">
+                                <span class="label">التنفس:</span>
+                                <span>Exhale as you pull, inhale as you extend</span>
+                            </div>
+                            <div class="cue-box safety">
+                                <span class="label">قيصرية:</span>
+                                <span>Stay upright — no leaning back to pull heavier</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Exercise 3 -->
+                    <div class="exercise">
+                        <div class="exercise-visual">
+                            <div class="placeholder">
+                                <div class="icon">🦋</div>
+                                <p>LAT PULLDOWN</p>
+                            </div>
+                        </div>
+                        <div class="exercise-info">
+                            <h4>3. سحب لات من فوق قبضة واسعة (Lat Pulldown - Wide Grip)</h4>
+                            <p class="description">امسكي البار أوسع من الكتف. اسحبي لتحت لحد أعلى الصدر والكوع هو اللي يقود الحركة، وارجعي بتحكم.</p>
+                            <div class="exercise-details">
+                                <span class="detail-tag">🔄 3 sets</span>
+                                <span class="detail-tag">🎯 10-12 reps</span>
+                                <span class="detail-tag">⏱️ 60s rest</span>
+                            </div>
+                            <div class="cue-box breathing">
+                                <span class="label">التنفس:</span>
+                                <span>Exhale pulling down, inhale releasing up</span>
+                            </div>
+                            <div class="cue-box safety">
+                                <span class="label">قيصرية:</span>
+                                <span>Avoid leaning too far back — keep torso stable</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Exercise 4 -->
+                    <div class="exercise">
+                        <div class="exercise-visual">
+                            <div class="placeholder">
+                                <div class="icon">💪</div>
+                                <p>INCLINE DUMBBELL CURL</p>
+                            </div>
+                        </div>
+                        <div class="exercise-info">
+                            <h4>4. بايسبس دامبل على بنش مائل (Incline Dumbbell Bicep Curl)</h4>
+                            <p class="description">اتكي على بنش مائل. ارفعي الدامبل للبايسبس من غير ما تحركي كوعك، وانزلي ببطء.</p>
+                            <div class="exercise-details">
+                                <span class="detail-tag">🔄 3 sets</span>
+                                <span class="detail-tag">🎯 12 reps</span>
+                                <span class="detail-tag">⏱️ 45s rest</span>
+                            </div>
+                            <div class="cue-box breathing">
+                                <span class="label">التنفس:</span>
+                                <span>Exhale curling up, inhale lowering down</span>
+                            </div>
+                            <div class="cue-box safety">
+                                <span class="label">قيصرية:</span>
+                                <span>Incline position is gentle on core — perfect for you!</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Exercise 5 -->
+                    <div class="exercise">
+                        <div class="exercise-visual">
+                            <div class="placeholder">
+                                <div class="icon">🔻</div>
+                                <p>TRICEP PUSHDOWN</p>
+                            </div>
+                        </div>
+                        <div class="exercise-info">
+                            <h4>5. ترايسبس كيبل لأسفل (Cable Tricep Pushdown)</h4>
+                            <p class="description">اقفي قدام جهاز الكيبل وادفعي الحبل لتحت لحد ما دراعك يفرد. اعصري الترايسبس تحت.</p>
+                            <div class="exercise-details">
+                                <span class="detail-tag">🔄 3 sets</span>
+                                <span class="detail-tag">🎯 12-15 reps</span>
+                                <span class="detail-tag">⏱️ 45s rest</span>
+                            </div>
+                            <div class="cue-box breathing">
+                                <span class="label">التنفس:</span>
+                                <span>Exhale pushing down, inhale returning</span>
+                            </div>
+                            <div class="cue-box safety">
+                                <span class="label">قيصرية:</span>
+                                <span>Keep elbows pinned to sides, stand tall</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Exercise 6 -->
+                    <div class="exercise">
+                        <div class="exercise-visual">
+                            <div class="placeholder">
+                                <div class="icon">🦅</div>
+                                <p>FACE PULL</p>
+                            </div>
+                        </div>
+                        <div class="exercise-info">
+                            <h4>6. سحب للوجه بالكيبل (Cable Face Pull)</h4>
+                            <p class="description">اسحبي الحبل لحد مستوى وشّك والكوع عالي وواسع. في الآخر اعصري لوح الكتف سوا.</p>
+                            <div class="exercise-details">
+                                <span class="detail-tag">🔄 3 sets</span>
+                                <span class="detail-tag">🎯 15 reps</span>
+                                <span class="detail-tag">⏱️ 45s rest</span>
+                            </div>
+                            <div class="cue-box breathing">
+                                <span class="label">التنفس:</span>
+                                <span>Exhale as you pull, inhale as you release</span>
+                            </div>
+                            <div class="cue-box safety">
+                                <span class="label">قيصرية:</span>
+                                <span>Great for posture — especially carrying baby!</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- COOL DOWN -->
+                <div class="phase">
+                    <div class="phase-title">
+                        <span class="emoji">🧘‍♀️</span>
+                        <h3>تهدئة وإطالات</h3>
+                        <span class="duration">5-8 min</span>
+                    </div>
+                    
+                    <div class="simple-exercise-list">
+                        <div class="simple-exercise">
+                            <span class="number">1</span>
+                            <div class="info">
+                                <h5>إطالة الصدر على الباب (Doorway Chest Stretch)</h5>
+                                <p>Arm on doorframe, gentle lean forward</p>
+                            </div>
+                            <span class="duration">30 sec each</span>
+                        </div>
+                        <div class="simple-exercise">
+                            <span class="number">2</span>
+                            <div class="info">
+                                <h5>إطالة كتف عرضية (Cross-Body Shoulder Stretch)</h5>
+                                <p>Pull arm across chest, hold gently</p>
+                            </div>
+                            <span class="duration">30 sec each</span>
+                        </div>
+                        <div class="simple-exercise">
+                            <span class="number">3</span>
+                            <div class="info">
+                                <h5>إطالة ترايسبس فوق الرأس (Overhead Triceps Stretch)</h5>
+                                <p>Reach behind head, gentle pull on elbow</p>
+                            </div>
+                            <span class="duration">30 sec each</span>
+                        </div>
+                        <div class="simple-exercise">
+                            <span class="number">4</span>
+                            <div class="info">
+                                <h5>وضعية الطفل (Child's Pose)</h5>
+                                <p>Relax forward, arms extended, breathe deeply</p>
+                            </div>
+                            <span class="duration">60 sec</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GAMIFICATION -->
+                <div class="gamification">
+                    <h3>✨ متابعة خلود — اليوم 1 ✨</h3>
+                    
+                    <div class="checklist">
+                        <h4>⭐ قائمة اليوم</h4>
+                        <div class="check-item">
+                            <div class="checkbox"></div>
+                            <span>التمرين اتعمل — برافو إنك حضرّتي 💪</span>
+                        </div>
+                        <div class="check-item">
+                            <div class="checkbox"></div>
+                            <span>شربت مية كفاية (زيادة علشان الرضاعة 🍼)</span>
+                        </div>
+                        <div class="check-item">
+                            <div class="checkbox"></div>
+                            <span>أكلت بروتين علشان التعافي</span>
+                        </div>
+                        <div class="check-item">
+                            <div class="checkbox"></div>
+                            <span>خدت دقيقة لنفسي النهارده</span>
+                        </div>
+                    </div>
+
+                    <div class="streak-tracker">
+                        <h4>🔥 تقدم الاستمرارية</h4>
+                        <div class="streak-levels">
+                            <div class="streak-level">
+                                <div class="star">⭐</div>
+                                <div class="name">نجمة برونزية</div>
+                                <div class="count">3 تمارين</div>
+                            </div>
+                            <div class="streak-level">
+                                <div class="star">⭐⭐</div>
+                                <div class="name">نجمة فضية</div>
+                                <div class="count">6 تمارين</div>
+                            </div>
+                            <div class="streak-level">
+                                <div class="star">⭐⭐⭐</div>
+                                <div class="name">نجمة ذهبية</div>
+                                <div class="count">9 تمارين</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- اليوم 2: LOWER BODY -->
+        <div class="day-card">
+            <div class="day-header lower">
+                <span class="day-number">اليوم 2</span>
+                <h2>تمارين الرجلين والأرداف</h2>
+                <p>Sculpt strong legs and build that postpartum booty, Kholoud!</p>
+            </div>
+
+            <div class="day-content">
+                <!-- WARM-UP -->
+                <div class="phase">
+                    <div class="phase-title">
+                        <span class="emoji">🔥</span>
+                        <h3>إحماء</h3>
+                        <span class="duration">5-8 min</span>
+                    </div>
+                    
+                    <div class="simple-exercise-list">
+                        <div class="simple-exercise">
+                            <span class="number">1</span>
+                            <div class="info">
+                                <h5>عجلة ثابتة أو مشي على السير (Bike/Treadmill)</h5>
+                                <p>Easy pace to warm up legs</p>
+                            </div>
+                            <span class="duration">3 min</span>
+                        </div>
+                        <div class="simple-exercise">
+                            <span class="number">2</span>
+                            <div class="info">
+                                <h5>Bodyweight رفع الحوض (Glute Bridge)</h5>
+                                <p>Squeeze glutes at top, feel the connection</p>
+                            </div>
+                            <span class="duration">15 reps</span>
+                        </div>
+                        <div class="simple-exercise">
+                            <span class="number">3</span>
+                            <div class="info">
+                                <h5>كلامشيلز (Clamshells)</h5>
+                                <p>Side lying, open knees like a shell</p>
+                            </div>
+                            <span class="duration">12 each side</span>
+                        </div>
+                        <div class="simple-exercise">
+                            <span class="number">4</span>
+                            <div class="info">
+                                <h5>مرجحة الرجل (Leg Swings)</h5>
+                                <p>Hold wall, swing leg front to back</p>
+                            </div>
+                            <span class="duration">10 each leg</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MAIN WORKOUT -->
+                <div class="phase">
+                    <div class="phase-title">
+                        <span class="emoji">🍑</span>
+                        <h3>التمرين الأساسي</h3>
+                        <span class="duration">35-40 min</span>
+                    </div>
+
+                    <!-- Exercise 1 -->
+                    <div class="exercise">
+                        <div class="exercise-visual">
+                            <div class="placeholder">
+                                <div class="icon">🏋️‍♀️</div>
+                                <p>GOBLET SQUAT</p>
+                            </div>
+                        </div>
+                        <div class="exercise-info">
+                            <h4>1. سكوات جوبلت (Goblet Squat)</h4>
+                            <p class="description">امسكي دامبل عند الصدر. انزلي سكوات لورا وتحت والركب مع اتجاه صوابع الرجل. اطلعي بالضغط على الكعب.</p>
+                            <div class="exercise-details">
+                                <span class="detail-tag">🔄 3 sets</span>
+                                <span class="detail-tag">🎯 12 reps</span>
+                                <span class="detail-tag">⏱️ 60s rest</span>
+                            </div>
+                            <div class="cue-box breathing">
+                                <span class="label">التنفس:</span>
+                                <span>Inhale down, exhale pressing up</span>
+                            </div>
+                            <div class="cue-box safety">
+                                <span class="label">قيصرية:</span>
+                                <span>Go to comfortable depth — no need to go super low</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Exercise 2 -->
+                    <div class="exercise">
+                        <div class="exercise-visual">
+                            <div class="placeholder">
+                                <div class="icon">🌉</div>
+                                <p>HIP THRUST</p>
+                            </div>
+                        </div>
+                        <div class="exercise-info">
+                            <h4>2. دفع الحوض بالبار (Barbell Hip Thrust)</h4>
+                            <p class="description">ضهرك العلوي على بنش والبار على الحوض. ارفعي الحوض لفوق واعصري الأرداف فوق، وانزلي بتحكم.</p>
+                            <div class="exercise-details">
+                                <span class="detail-tag">🔄 4 sets</span>
+                                <span class="detail-tag">🎯 10-12 reps</span>
+                                <span class="detail-tag">⏱️ 60s rest</span>
+                            </div>
+                            <div class="cue-box breathing">
+                                <span class="label">التنفس:</span>
+                                <span>Exhale at top squeeze, inhale lowering</span>
+                            </div>
+                            <div class="cue-box safety">
+                                <span class="label">قيصرية:</span>
+                                <span>Perfect exercise for you! Pad the bar for comfort</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Exercise 3 -->
+                    <div class="exercise">
+                        <div class="exercise-visual">
+                            <div class="placeholder">
+                                <div class="icon">🦵</div>
+                                <p>ROMANIAN DEADLIFT</p>
+                            </div>
+                        </div>
+                        <div class="exercise-info">
+                            <h4>3. ديدلفت روماني بالدامبل (Dumbbell Romanian Deadlift)</h4>
+                            <p class="description">Dumbbells in front of thighs. Hinge at hips, sliding weights down legs. Feel hamstring stretch, then squeeze glutes to stand.</p>
+                            <div class="exercise-details">
+                                <span class="detail-tag">🔄 3 sets</span>
+                                <span class="detail-tag">🎯 10-12 reps</span>
+                                <span class="detail-tag">⏱️ 60s rest</span>
+                            </div>
+                            <div class="cue-box breathing">
+                                <span class="label">التنفس:</span>
+                                <span>Inhale hinging down, exhale standing tall</span>
+                            </div>
+                            <div class="cue-box safety">
+                                <span class="label">قيصرية:</span>
+                                <span>Keep back flat, soft knee bend — don't overextend</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Exercise 4 -->
+                    <div class="exercise">
+                        <div class="exercise-visual">
+                            <div class="placeholder">
+                                <div class="icon">🚶‍♀️</div>
+                                <p>WALKING LUNGE</p>
+                            </div>
+                        </div>
+                        <div class="exercise-info">
+                            <h4>4. لونجز مشي بالدامبل (Walking Dumbbell Lunges)</h4>
+                            <p class="description">خدي خطوة قدام لونج والركبة الخلفية تقرب من الأرض. اطلعي بالضغط على كعب الرجل اللي قدام.</p>
+                            <div class="exercise-details">
+                                <span class="detail-tag">🔄 3 sets</span>
+                                <span class="detail-tag">🎯 10 each leg</span>
+                                <span class="detail-tag">⏱️ 60s rest</span>
+                            </div>
+                            <div class="cue-box breathing">
+                                <span class="label">التنفس:</span>
+                                <span>Inhale stepping down, exhale pushing up</span>
+                            </div>
+                            <div class="cue-box safety">
+                                <span class="label">قيصرية:</span>
+                                <span>Take smaller steps if balance feels off — totally normal!</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Exercise 5 -->
+                    <div class="exercise">
+                        <div class="exercise-visual">
+                            <div class="placeholder">
+                                <div class="icon">🦿</div>
+                                <p>LEG PRESS</p>
+                            </div>
+                        </div>
+                        <div class="exercise-info">
+                            <h4>5. ليج برس والقدم عالية وواسعة (Leg Press - Feet High & Wide)</h4>
+                            <p class="description">حطي رجلك عالية على البلاتفورم وبعرض الكتف. انزلي لحد زاوية 90° في الركبة واطلعي بالضغط على الكعب.</p>
+                            <div class="exercise-details">
+                                <span class="detail-tag">🔄 3 sets</span>
+                                <span class="detail-tag">🎯 12 reps</span>
+                                <span class="detail-tag">⏱️ 60s rest</span>
+                            </div>
+                            <div class="cue-box breathing">
+                                <span class="label">التنفس:</span>
+                                <span>Inhale lowering, exhale pressing</span>
+                            </div>
+                            <div class="cue-box safety">
+                                <span class="label">قيصرية:</span>
+                                <span>Don't let lower back lift off pad — stay controlled</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Exercise 6 -->
+                    <div class="exercise">
+                        <div class="exercise-visual">
+                            <div class="placeholder">
+                                <div class="icon">🔥</div>
+                                <p>CABLE KICKBACK</p>
+                            </div>
+                        </div>
+                        <div class="exercise-info">
+                            <h4>6. كيك باك للأرداف بالكيبل (Cable Glute Kickback)</h4>
+                            <p class="description">ركبي ستراب في الكاحل على كيبل منخفض. اركلي رجلك لورا واعصري الأرداف فوق، وارجعي ببطء.</p>
+                            <div class="exercise-details">
+                                <span class="detail-tag">🔄 3 sets</span>
+                                <span class="detail-tag">🎯 12 each leg</span>
+                                <span class="detail-tag">⏱️ 45s rest</span>
+                            </div>
+                            <div class="cue-box breathing">
+                                <span class="label">التنفس:</span>
+                                <span>Exhale kicking back, inhale returning</span>
+                            </div>
+                            <div class="cue-box safety">
+                                <span class="label">قيصرية:</span>
+                                <span>Keep hips square, don't rotate — isolate the glute</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- COOL DOWN -->
+                <div class="phase">
+                    <div class="phase-title">
+                        <span class="emoji">🧘‍♀️</span>
+                        <h3>تهدئة وإطالات</h3>
+                        <span class="duration">5-8 min</span>
+                    </div>
+                    
+                    <div class="simple-exercise-list">
+                        <div class="simple-exercise">
+                            <span class="number">1</span>
+                            <div class="info">
+                                <h5>إطالة رقم 4 (Figure 4 Stretch)</h5>
+                                <p>Lie on back, ankle over knee, pull toward chest</p>
+                            </div>
+                            <span class="duration">45 sec each</span>
+                        </div>
+                        <div class="simple-exercise">
+                            <span class="number">2</span>
+                            <div class="info">
+                                <h5>إطالة مثني الحوض ركوع (Hip Flexor Stretch)</h5>
+                                <p>Rear knee down, lean into front leg</p>
+                            </div>
+                            <span class="duration">45 sec each</span>
+                        </div>
+                        <div class="simple-exercise">
+                            <span class="number">3</span>
+                            <div class="info">
+                                <h5>إطالة خلفية الفخذ جلوس (Seated Hamstring Stretch)</h5>
+                                <p>One leg extended, reach toward toes</p>
+                            </div>
+                            <span class="duration">30 sec each</span>
+                        </div>
+                        <div class="simple-exercise">
+                            <span class="number">4</span>
+                            <div class="info">
+                                <h5>لفّ العمود الفقري على الضهر (Supine Spinal Twist)</h5>
+                                <p>Knees to one side, arms wide, breathe deeply</p>
+                            </div>
+                            <span class="duration">45 sec each</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GAMIFICATION -->
+                <div class="gamification">
+                    <h3>✨ متابعة خلود — اليوم 2 ✨</h3>
+                    
+                    <div class="checklist">
+                        <h4>⭐ قائمة اليوم</h4>
+                        <div class="check-item">
+                            <div class="checkbox"></div>
+                            <span>التمرين اتعمل — ملكة الرجلين 👑</span>
+                        </div>
+                        <div class="check-item">
+                            <div class="checkbox"></div>
+                            <span>شربت مية كفاية (تستاهلي!)</span>
+                        </div>
+                        <div class="check-item">
+                            <div class="checkbox"></div>
+                            <span>أكلت بروتين علشان العضلات تبني</span>
+                        </div>
+                        <div class="check-item">
+                            <div class="checkbox"></div>
+                            <span>احتفلت إني اهتميت بنفسي</span>
+                        </div>
+                    </div>
+
+                    <div class="streak-tracker">
+                        <h4>🔥 تقدم الاستمرارية</h4>
+                        <div class="streak-levels">
+                            <div class="streak-level">
+                                <div class="star">⭐</div>
+                                <div class="name">نجمة برونزية</div>
+                                <div class="count">3 تمارين</div>
+                            </div>
+                            <div class="streak-level">
+                                <div class="star">⭐⭐</div>
+                                <div class="name">نجمة فضية</div>
+                                <div class="count">6 تمارين</div>
+                            </div>
+                            <div class="streak-level">
+                                <div class="star">⭐⭐⭐</div>
+                                <div class="name">نجمة ذهبية</div>
+                                <div class="count">9 تمارين</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- اليوم 3: CORE + CARDIO -->
+        <div class="day-card">
+            <div class="day-header core">
+                <span class="day-number">اليوم 3</span>
+                <h2>كور + كارديو</h2>
+                <p>Rebuild your deep core safely & get that heart pumping, Kholoud!</p>
+            </div>
+
+            <div class="day-content">
+                <!-- WARM-UP -->
+                <div class="phase">
+                    <div class="phase-title">
+                        <span class="emoji">🔥</span>
+                        <h3>إحماء</h3>
+                        <span class="duration">5-8 min</span>
+                    </div>
+                    
+                    <div class="simple-exercise-list">
+                        <div class="simple-exercise">
+                            <span class="number">1</span>
+                            <div class="info">
+                                <h5>مشي خفيف على السير بميل (Incline Walk)</h5>
+                                <p>3-5% incline, easy pace</p>
+                            </div>
+                            <span class="duration">3 min</span>
+                        </div>
+                        <div class="simple-exercise">
+                            <span class="number">2</span>
+                            <div class="info">
+                                <h5>تنفّس حجابي (Diaphragmatic Breathing)</h5>
+                                <p>Hand on belly, breathe into your hand</p>
+                            </div>
+                            <span class="duration">10 breaths</span>
+                        </div>
+                        <div class="simple-exercise">
+                            <span class="number">3</span>
+                            <div class="info">
+                                <h5>ميل الحوض (Pelvic Tilts)</h5>
+                                <p>Lying on back, gently tilt pelvis up and down</p>
+                            </div>
+                            <span class="duration">15 reps</span>
+                        </div>
+                        <div class="simple-exercise">
+                            <span class="number">4</span>
+                            <div class="info">
+                                <h5>القطة/البقرة (Cat-Cow)</h5>
+                                <p>Gentle spinal waves, connect breath to movement</p>
+                            </div>
+                            <span class="duration">10 reps</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CORE CIRCUIT -->
+                <div class="phase">
+                    <div class="phase-title">
+                        <span class="emoji">🎯</span>
+                        <h3>Core Circuit (2-3 Rounds)</h3>
+                        <span class="duration">15-20 min</span>
+                    </div>
+
+                    <!-- Exercise 1 -->
+                    <div class="exercise">
+                        <div class="exercise-visual">
+                            <div class="placeholder">
+                                <div class="icon">🪲</div>
+                                <p>DEAD BUG</p>
+                            </div>
+                        </div>
+                        <div class="exercise-info">
+                            <h4>1. تمرين ديد بَج (Dead Bug)</h4>
+                            <p class="description">نامي على ضهرك، دراعات لفوق وركب 90°. نزّلي دراع ورجل عكس بعض ببطء مع تثبيت ضهرك على الأرض.</p>
+                            <div class="exercise-details">
+                                <span class="detail-tag">🔄 2-3 rounds</span>
+                                <span class="detail-tag">🎯 10 each side</span>
+                                <span class="detail-tag">⏱️ 30s rest</span>
+                            </div>
+                            <div class="cue-box breathing">
+                                <span class="label">التنفس:</span>
+                                <span>Exhale as limbs extend, inhale returning</span>
+                            </div>
+                            <div class="cue-box safety">
+                                <span class="label">قيصرية:</span>
+                                <span>GOLD STANDARD exercise for you — slow and controlled!</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Exercise 2 -->
+                    <div class="exercise">
+                        <div class="exercise-visual">
+                            <div class="placeholder">
+                                <div class="icon">🐕</div>
+                                <p>BIRD DOG</p>
+                            </div>
+                        </div>
+                        <div class="exercise-info">
+                            <h4>2. تمرين بيرد دوج (Bird Dog)</h4>
+                            <p class="description">على أربع، افردي دراع ورجل عكس بعض. خلي الحوض ثابت من غير لَفّ، ثبتي ثانيتين وارجعي.</p>
+                            <div class="exercise-details">
+                                <span class="detail-tag">🔄 2-3 rounds</span>
+                                <span class="detail-tag">🎯 10 each side</span>
+                                <span class="detail-tag">⏱️ 30s rest</span>
+                            </div>
+                            <div class="cue-box breathing">
+                                <span class="label">التنفس:</span>
+                                <span>Exhale extending, inhale returning</span>
+                            </div>
+                            <div class="cue-box safety">
+                                <span class="label">قيصرية:</span>
+                                <span>Gentle on scar, builds spinal stability beautifully</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Exercise 3 -->
+                    <div class="exercise">
+                        <div class="exercise-visual">
+                            <div class="placeholder">
+                                <div class="icon">🌉</div>
+                                <p>GLUTE BRIDGE + MARCH</p>
+                            </div>
+                        </div>
+                        <div class="exercise-info">
+                            <h4>3. رفع حوض مع مارش (Glute Bridge with March)</h4>
+                            <p class="description">اثبتي في وضع رفع الحوض، وارفعي رجل واحدة سنة بسيطة بالتبادل. خلي الحوض ثابت ومتوازن.</p>
+                            <div class="exercise-details">
+                                <span class="detail-tag">🔄 2-3 rounds</span>
+                                <span class="detail-tag">🎯 8 each leg</span>
+                                <span class="detail-tag">⏱️ 30s rest</span>
+                            </div>
+                            <div class="cue-box breathing">
+                                <span class="label">التنفس:</span>
+                                <span>Exhale lifting foot, inhale lowering</span>
+                            </div>
+                            <div class="cue-box safety">
+                                <span class="label">قيصرية:</span>
+                                <span>Challenges core stability without pressure on scar</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Exercise 4 -->
+                    <div class="exercise">
+                        <div class="exercise-visual">
+                            <div class="placeholder">
+                                <div class="icon">📐</div>
+                                <p>MODIFIED SIDE PLANK</p>
+                            </div>
+                        </div>
+                        <div class="exercise-info">
+                            <h4>4. بلانك جانبي معدل (Modified Side Plank) (Knee Down)</h4>
+                            <p class="description">الركبة اللي تحت مثنية على الأرض والرجل اللي فوق مفرودة. ارفعي الحوض وخلي جسمك خط واحد، واثبتي.</p>
+                            <div class="exercise-details">
+                                <span class="detail-tag">🔄 2-3 rounds</span>
+                                <span class="detail-tag">🎯 20-30 sec each</span>
+                                <span class="detail-tag">⏱️ 30s rest</span>
+                            </div>
+                            <div class="cue-box breathing">
+                                <span class="label">التنفس:</span>
+                                <span>Breathe steadily throughout the hold</span>
+                            </div>
+                            <div class="cue-box safety">
+                                <span class="label">قيصرية:</span>
+                                <span>Modified position = safe oblique work for you!</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Exercise 5 -->
+                    <div class="exercise">
+                        <div class="exercise-visual">
+                            <div class="placeholder">
+                                <div class="icon">🦶</div>
+                                <p>HEEL SLIDES</p>
+                            </div>
+                        </div>
+                        <div class="exercise-info">
+                            <h4>5. سحب الكعب على الأرض (Heel Slides)</h4>
+                            <p class="description">نامي على ضهرك واسحبي كعب رجلك على الأرض لحد ما تفرد، وبعدين ارجعي. خلي أسفل الضهر ثابت على الأرض.</p>
+                            <div class="exercise-details">
+                                <span class="detail-tag">🔄 2-3 rounds</span>
+                                <span class="detail-tag">🎯 10 each leg</span>
+                                <span class="detail-tag">⏱️ 30s rest</span>
+                            </div>
+                            <div class="cue-box breathing">
+                                <span class="label">التنفس:</span>
+                                <span>Exhale sliding out, inhale sliding back</span>
+                            </div>
+                            <div class="cue-box safety">
+                                <span class="label">قيصرية:</span>
+                                <span>Perfect deep core re-activation — listen to your body!</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARDIO -->
+                <div class="phase">
+                    <div class="phase-title">
+                        <span class="emoji">❤️</span>
+                        <h3>Low-Impact Cardio</h3>
+                        <span class="duration">15-20 min</span>
+                    </div>
+
+                    <div class="simple-exercise-list">
+                        <div class="simple-exercise">
+                            <span class="number">A</span>
+                            <div class="info">
+                                <h5>اختيار: Incline Treadmill Walk</h5>
+                                <p>10-12% incline, moderate pace — great for fat burn without impact!</p>
+                            </div>
+                            <span class="duration">15-20 min</span>
+                        </div>
+                        <div class="simple-exercise">
+                            <span class="number">B</span>
+                            <div class="info">
+                                <h5>اختيار: Elliptical</h5>
+                                <p>Moderate resistance, steady pace — easy on joints</p>
+                            </div>
+                            <span class="duration">15-20 min</span>
+                        </div>
+                        <div class="simple-exercise">
+                            <span class="number">C</span>
+                            <div class="info">
+                                <h5>اختيار: Stationary Bike</h5>
+                                <p>Intervals: 2 min moderate, 1 min faster, repeat</p>
+                            </div>
+                            <span class="duration">15-20 min</span>
+                        </div>
+                    </div>
+
+                    <div class="highlight" style="margin-top: 20px; background: #E8F4E8; border-left-color: var(--sage);">
+                        <strong>💚 Kholoud's Cardio Tip:</strong> As a breastfeeding mama, stay hydrated! Bring water and sip throughout. Your heart rate may feel higher than pre-pregnancy — that's normal. Listen to your body! 
+                    </div>
+                </div>
+
+                <!-- COOL DOWN -->
+                <div class="phase">
+                    <div class="phase-title">
+                        <span class="emoji">🧘‍♀️</span>
+                        <h3>تهدئة وإطالات</h3>
+                        <span class="duration">5-8 min</span>
+                    </div>
+                    
+                    <div class="simple-exercise-list">
+                        <div class="simple-exercise">
+                            <span class="number">1</span>
+                            <div class="info">
+                                <h5>حضن الركب على الضهر (Knee Hugs)</h5>
+                                <p>Gently pull both knees to chest, rock side to side</p>
+                            </div>
+                            <span class="duration">45 sec</span>
+                        </div>
+                        <div class="simple-exercise">
+                            <span class="number">2</span>
+                            <div class="info">
+                                <h5>لفّ العمود الفقري على الضهر (Supine Spinal Twist)</h5>
+                                <p>Knees to one side, look opposite direction</p>
+                            </div>
+                            <span class="duration">45 sec each</span>
+                        </div>
+                        <div class="simple-exercise">
+                            <span class="number">3</span>
+                            <div class="info">
+                                <h5>وضعية البيبي السعيد (Happy Baby)</h5>
+                                <p>Hold feet, gently rock — releases lower back</p>
+                            </div>
+                            <span class="duration">45 sec</span>
+                        </div>
+                        <div class="simple-exercise">
+                            <span class="number">4</span>
+                            <div class="info">
+                                <h5>استرخاء مع تنفس (Savasana)</h5>
+                                <p>Lie flat, hands on belly, 5 deep breaths</p>
+                            </div>
+                            <span class="duration">60 sec</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GAMIFICATION -->
+                <div class="gamification">
+                    <h3>✨ متابعة خلود — اليوم 3 ✨</h3>
+                    
+                    <div class="checklist">
+                        <h4>⭐ قائمة اليوم</h4>
+                        <div class="check-item">
+                            <div class="checkbox"></div>
+                            <span>التمرين اتعمل — إنتي جامدة جدًا ✨</span>
+                        </div>
+                        <div class="check-item">
+                            <div class="checkbox"></div>
+                            <span>شربت مية كفاية (Bonus الرضاعة 🍼)</span>
+                        </div>
+                        <div class="check-item">
+                            <div class="checkbox"></div>
+                            <span>أكلت بروتين للتعافي</span>
+                        </div>
+                        <div class="check-item">
+                            <div class="checkbox"></div>
+                            <span>احترمت حدود جسمي النهارده</span>
+                        </div>
+                    </div>
+
+                    <div class="streak-tracker">
+                        <h4>🔥 تقدم الاستمرارية</h4>
+                        <div class="streak-levels">
+                            <div class="streak-level">
+                                <div class="star">⭐</div>
+                                <div class="name">نجمة برونزية</div>
+                                <div class="count">3 تمارين</div>
+                            </div>
+                            <div class="streak-level">
+                                <div class="star">⭐⭐</div>
+                                <div class="name">نجمة فضية</div>
+                                <div class="count">6 تمارين</div>
+                            </div>
+                            <div class="streak-level">
+                                <div class="star">⭐⭐⭐</div>
+                                <div class="name">نجمة ذهبية</div>
+                                <div class="count">9 تمارين</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DAY 4: OPTIONAL RECOVERY -->
+        <div class="day-card">
+            <div class="day-header recovery">
+                <span class="day-number">اليوم 4 — اختياري</span>
+                <h2>مرونة وريكفري</h2>
+                <p>Rest is part of progress, Kholoud. This day is your gift to yourself.</p>
+            </div>
+
+            <div class="day-content">
+                <div class="phase">
+                    <div class="phase-title">
+                        <span class="emoji">🌸</span>
+                        <h3>Gentle Full-Body Flow</h3>
+                        <span class="duration">25-30 min</span>
+                    </div>
+                    
+                    <div class="simple-exercise-list">
+                        <div class="simple-exercise">
+                            <span class="number">1</span>
+                            <div class="info">
+                                <h5>فوم رول للأرداف وأمام الفخذ (Foam Rolling)</h5>
+                                <p>Slow rolls, pause on tight spots</p>
+                            </div>
+                            <span class="duration">3 min each</span>
+                        </div>
+                        <div class="simple-exercise">
+                            <span class="number">2</span>
+                            <div class="info">
+                                <h5>فلو القطة/البقرة (Cat-Cow Flow)</h5>
+                                <p>Move with your breath, no rush</p>
+                            </div>
+                            <span class="duration">2 min</span>
+                        </div>
+                        <div class="simple-exercise">
+                            <span class="number">3</span>
+                            <div class="info">
+                                <h5>ثريد ذا نيدل (Thread the Needle)</h5>
+                                <p>Rotate through thoracic spine, reach under and up</p>
+                            </div>
+                            <span class="duration">10 each side</span>
+                        </div>
+                        <div class="simple-exercise">
+                            <span class="number">4</span>
+                            <div class="info">
+                                <h5>إطالة شاملة (World's Greatest Stretch)</h5>
+                                <p>Lunge + rotation + hamstring stretch combo</p>
+                            </div>
+                            <span class="duration">5 each side</span>
+                        </div>
+                        <div class="simple-exercise">
+                            <span class="number">5</span>
+                            <div class="info">
+                                <h5>إطالة 90/90 للحوض (90/90 Hip Stretch)</h5>
+                                <p>Both legs at 90°, shift weight gently</p>
+                            </div>
+                            <span class="duration">60 sec each</span>
+                        </div>
+                        <div class="simple-exercise">
+                            <span class="number">6</span>
+                            <div class="info">
+                                <h5>وضعية الطفل مع دعم (Supported Child's Pose)</h5>
+                                <p>Use pillow under chest if needed, melt into the floor</p>
+                            </div>
+                            <span class="duration">2 min</span>
+                        </div>
+                        <div class="simple-exercise">
+                            <span class="number">7</span>
+                            <div class="info">
+                                <h5>الرجلين على الحيطة (Legs Up The Wall)</h5>
+                                <p>Ultimate recovery position — great for tired mama legs!</p>
+                            </div>
+                            <span class="duration">5 min</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GAMIFICATION -->
+                <div class="gamification">
+                    <h3>✨ Recovery Day Reflection ✨</h3>
+                    
+                    <div class="checklist">
+                        <h4>💗 Self-Care Checklist</h4>
+                        <div class="check-item">
+                            <div class="checkbox"></div>
+                            <span>Moved my body gently today</span>
+                        </div>
+                        <div class="check-item">
+                            <div class="checkbox"></div>
+                            <span>Prioritized rest without guilt</span>
+                        </div>
+                        <div class="check-item">
+                            <div class="checkbox"></div>
+                            <span>Stayed hydrated</span>
+                        </div>
+                        <div class="check-item">
+                            <div class="checkbox"></div>
+                            <span>Reminded myself: I am enough</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ACHIEVEMENTS SECTION -->
+        <section class="achievements">
+            <h2>🏆 شارات إنجاز خلود</h2>
+            <p style="color: #666; margin-bottom: 30px;">افتحي الشارات دي مع تقدمك في الرحلة!</p>
+            
+            <div class="badges">
+                <div class="badge-card">
+                    <div class="icon">🌟</div>
+                    <h4>أول أسبوع قوة (First Week Strong)</h4>
+                    <p>Complete your first 3 تمارين</p>
+                </div>
+                <div class="badge-card">
+                    <div class="icon">👑</div>
+                    <h4>ملكة الالتزام (Consistency Queen)</h4>
+                    <p>2 weeks without missing a session</p>
+                </div>
+                <div class="badge-card">
+                    <div class="icon">💪</div>
+                    <h4>طاقة ماما القوية (Strong Mom Energy)</h4>
+                    <p>Complete the full 12-week program</p>
+                </div>
+                <div class="badge-card">
+                    <div class="icon">🦋</div>
+                    <h4>Core Comeback</h4>
+                    <p>Master all Day 3 exercises with perfect form</p>
+                </div>
+                <div class="badge-card">
+                    <div class="icon">🌈</div>
+                    <h4>Self-Love Champion</h4>
+                    <p>Take a rest day when you needed it</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- نسخة الموبايل -->
+        <section class="mobile-section">
+            <h2>📱 Quick Gym Reference</h2>
+            <p class="subtitle">Screenshot these for easy access at the gym!</p>
+
+            <!-- Day 1 Mobile -->
+            <div class="phone-frame">
+                <div class="phone-screen">
+                    <div class="phone-day-title">💪 اليوم 1: Upper Body</div>
+                    
+                    <div class="phone-phase">
+                        <h5>🔥 WARM-UP (5 min)</h5>
+                        <div class="phone-exercise"><span>Arm Circles</span><span>30s each</span></div>
+                        <div class="phone-exercise"><span>Cat-Cow</span><span>10 reps</span></div>
+                        <div class="phone-exercise"><span>Wall Push-ups</span><span>10 reps</span></div>
+                        <div class="phone-exercise"><span>Band Pull-Aparts</span><span>15 reps</span></div>
+                    </div>
+
+                    <div class="phone-phase">
+                        <h5>💪 WORKOUT</h5>
+                        <div class="phone-exercise"><span>Seated DB Press</span><span>3×12</span></div>
+                        <div class="phone-exercise"><span>Seated Cable Row</span><span>3×12</span></div>
+                        <div class="phone-exercise"><span>Lat Pulldown</span><span>3×12</span></div>
+                        <div class="phone-exercise"><span>Incline Bicep Curl</span><span>3×12</span></div>
+                        <div class="phone-exercise"><span>Tricep Pushdown</span><span>3×15</span></div>
+                        <div class="phone-exercise"><span>Face Pull</span><span>3×15</span></div>
+                    </div>
+
+                    <div class="phone-phase">
+                        <h5>🧘‍♀️ COOL DOWN (5 min)</h5>
+                        <div class="phone-exercise"><span>Chest Stretch</span><span>30s each</span></div>
+                        <div class="phone-exercise"><span>Shoulder Stretch</span><span>30s each</span></div>
+                        <div class="phone-exercise"><span>Child's Pose</span><span>60s</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 2 Mobile -->
+            <div class="phone-frame">
+                <div class="phone-screen">
+                    <div class="phone-day-title">🍑 اليوم 2: Lower Body</div>
+                    
+                    <div class="phone-phase">
+                        <h5>🔥 WARM-UP (5 min)</h5>
+                        <div class="phone-exercise"><span>Bike/Walk</span><span>3 min</span></div>
+                        <div class="phone-exercise"><span>رفع الحوض (Glute Bridge)</span><span>15 reps</span></div>
+                        <div class="phone-exercise"><span>Clamshells</span><span>12 each</span></div>
+                        <div class="phone-exercise"><span>Leg Swings</span><span>10 each</span></div>
+                    </div>
+
+                    <div class="phone-phase">
+                        <h5>🍑 WORKOUT</h5>
+                        <div class="phone-exercise"><span>Goblet Squat</span><span>3×12</span></div>
+                        <div class="phone-exercise"><span>Hip Thrust</span><span>4×12</span></div>
+                        <div class="phone-exercise"><span>Romanian Deadlift</span><span>3×12</span></div>
+                        <div class="phone-exercise"><span>Walking Lunge</span><span>3×10 each</span></div>
+                        <div class="phone-exercise"><span>Leg Press</span><span>3×12</span></div>
+                        <div class="phone-exercise"><span>Cable Kickback</span><span>3×12 each</span></div>
+                    </div>
+
+                    <div class="phone-phase">
+                        <h5>🧘‍♀️ COOL DOWN (5 min)</h5>
+                        <div class="phone-exercise"><span>Figure 4 Stretch</span><span>45s each</span></div>
+                        <div class="phone-exercise"><span>Hip Flexor Stretch</span><span>45s each</span></div>
+                        <div class="phone-exercise"><span>Spinal Twist</span><span>45s each</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 3 Mobile -->
+            <div class="phone-frame">
+                <div class="phone-screen">
+                    <div class="phone-day-title">🔥 اليوم 3: كور + كارديو</div>
+                    
+                    <div class="phone-phase">
+                        <h5>🔥 WARM-UP (5 min)</h5>
+                        <div class="phone-exercise"><span>Incline Walk</span><span>3 min</span></div>
+                        <div class="phone-exercise"><span>Deep Breathing</span><span>10 breaths</span></div>
+                        <div class="phone-exercise"><span>Pelvic Tilts</span><span>15 reps</span></div>
+                    </div>
+
+                    <div class="phone-phase">
+                        <h5>🎯 CORE (2-3 rounds)</h5>
+                        <div class="phone-exercise"><span>تمرين ديد بَج (Dead Bug)</span><span>10 each</span></div>
+                        <div class="phone-exercise"><span>تمرين بيرد دوج (Bird Dog)</span><span>10 each</span></div>
+                        <div class="phone-exercise"><span>Bridge March</span><span>8 each</span></div>
+                        <div class="phone-exercise"><span>Side Plank (mod)</span><span>20-30s each</span></div>
+                        <div class="phone-exercise"><span>Heel Slides</span><span>10 each</span></div>
+                    </div>
+
+                    <div class="phone-phase">
+                        <h5>❤️ CARDIO (pick one)</h5>
+                        <div class="phone-exercise"><span>Incline Walk</span><span>15-20 min</span></div>
+                        <div class="phone-exercise"><span>Elliptical</span><span>15-20 min</span></div>
+                        <div class="phone-exercise"><span>Bike</span><span>15-20 min</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CLOSING -->
+        <section class="closing">
+            <div class="emoji">🌸</div>
+            <h2>You've Got This, Kholoud.</h2>
+            <p>Every rep, every breath, every day you choose yourself — you're not just building strength. You're showing your baby what it looks like to honor your body with love.</p>
+            <p>Progress isn't perfection. It's showing up, again and again, even when it's hard.</p>
+            <div class="signature">With belief in you always, ✨<br>Your Postpartum Fitness Guide</div>
+        </section>
+
+        <!-- DESIGN NOTES (for future designer) -->
+        <section style="background: #f9f9f9; padding: 40px; border-radius: 20px; margin-top: 40px; border: 2px dashed #ddd;">
+            <h3 style="color: #888; margin-bottom: 20px;">🎨 Visual Style Direction (For Designer)</h3>
+            <ul style="color: #888; line-height: 2;">
+                <li><strong>Color Palette:</strong> Blush pink (#F8E8E8), Dusty rose (#D4A5A5), Sage green (#B8C9B8), Cream (#FDF9F7), Soft gold accents</li>
+                <li><strong>Typography:</strong> Playfair Display for headers (elegant serif), Poppins for body (clean sans-serif)</li>
+                <li><strong>Aesthetic:</strong> Premium, calm, feminine — like a luxury wellness brand</li>
+                <li><strong>Layout:</strong> Generous white space, rounded corners, soft shadows</li>
+                <li><strong>Exercise Images:</strong> Replace placeholder boxes with real gym photos showing correct form — ideally featuring women or neutral demonstrations</li>
+                <li><strong>Format Options:</strong> Works as web page, PDF, or Instagram carousel (mobile sections)</li>
+                <li><strong>Accessibility:</strong> High contrast text, clear hierarchy, easy to read at gym</li>
+            </ul>
+        </section>
+
+    </div>
+</body>
+</html>
