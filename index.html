@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>برنامج تمارين آمن بعد القيصرية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #D4A5A5;
+            --primary-light: #F8E8E8;
+            --secondary: #B8C9B8;
+            --secondary-light: #E8F0E8;
+            --accent: #E8D4C4;
+            --cream: #FDF9F7;
+            --charcoal: #3D3D3D;
+            --gold: #D4AF37;
+            --text-light: #666;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background: var(--cream);
+            color: var(--charcoal);
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--cream) 50%, var(--secondary-light) 100%);
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "✿";
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 50px;
+            opacity: 0.2;
+            color: var(--primary);
+        }
+
+        .hero::after {
+            content: "✿";
+            position: absolute;
+            bottom: 20px;
+            left: 30px;
+            font-size: 50px;
+            opacity: 0.2;
+            color: var(--secondary);
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--charcoal);
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .hero .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 30px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary) 0%, #C9B1B1 100%);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .hero-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(212,165,165,0.4);
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            padding: 20px;
+            background: white;
+            margin: -30px 20px 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            position: relative;
+            z-index: 10;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 10px 5px;
+        }
+
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            color: var(--text-light);
+        }
+
+        /* Sections */
+        .section {
+            padding: 40px 20px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 25px;
+            color: var(--charcoal);
+        }
+
+        .section-title span {
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: var(--primary);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* For Who Section */
+        .for-who {
+            background: white;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .feature-card {
+            background: var(--primary-light);
+            padding: 20px 15px;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card .icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            font-size: 0.9rem;
+            color: var(--charcoal);
+        }
+
+        /* Why Safe Section */
+        .why-safe {
+            background: var(--secondary-light);
+        }
+
+        .safety-list {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .safety-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .safety-item:last-child {
+            border-bottom: none;
+        }
+
+        .safety-item .check {
+            width: 30px;
+            height: 30px;
+            background: var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .safety-item p {
+            font-size: 1rem;
+        }
+
+        /* Schedule Section */
+        .schedule {
+            background: white;
+        }
+
+        .day-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .day-tab {
+            padding: 12px 25px;
+            border: 2px solid var(--primary);
+            background: white;
+            border-radius: 25px;
+            cursor: pointer;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.3s;
+            color: var(--charcoal);
+        }
+
+        .day-tab.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        .day-content {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .day-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .day-header {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, var(--primary-light) 0%, white 100%);
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+
+        .day-header h3 {
+            font-size: 1.3rem;
+            color: var(--charcoal);
+        }
+
+        .day-header p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Exercise Cards */
+        .exercise-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .exercise-card {
+            background: var(--cream);
+            border-radius: 15px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+
+        .exercise-card:hover {
+            border-color: var(--primary-light);
+        }
+
+        .exercise-card.completed {
+            background: var(--secondary-light);
+            border-color: var(--secondary);
+        }
+
+        .exercise-checkbox {
+            width: 28px;
+            height: 28px;
+            border: 2px solid var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: all 0.3s;
+        }
+
+        .exercise-card.completed .exercise-checkbox {
+            background: var(--secondary);
+            border-color: var(--secondary);
+            color: white;
+        }
+
+        .exercise-icon {
+            width: 50px;
+            height: 50px;
+            background: white;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .exercise-info {
+            flex: 1;
+        }
+
+        .exercise-name {
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 3px;
+        }
+
+        .exercise-details {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        .exercise-reps {
+            background: var(--primary);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+
+        /* Safety Tooltip */
+        .safety-tip {
+            background: #FFF3CD;
+            border-radius: 10px;
+            padding: 12px 15px;
+            margin-top: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 0.9rem;
+        }
+
+        .safety-tip .icon {
+            font-size: 1.2rem;
+        }
+
+        /* Complete Day Button */
+        .complete-day-btn {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, var(--primary) 0%, #C9B1B1 100%);
+            color: white;
+            border: none;
+            border-radius: 15px;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s;
+        }
+
+        .complete-day-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(212,165,165,0.4);
+        }
+
+        .complete-day-btn:disabled {
+            background: var(--secondary);
+            cursor: default;
+        }
+
+        .complete-day-btn.completed {
+            background: var(--secondary);
+        }
+
+        /* Progress Section */
+        .progress-section {
+            background: var(--primary-light);
+        }
+
+        .streak-card {
+            background: linear-gradient(135deg, var(--gold) 0%, #E8C547 100%);
+            padding: 25px;
+            border-radius: 20px;
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .streak-stars {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .streak-level {
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .streak-progress {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Badges */
+        .badges-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .badge {
+            background: white;
+            padding: 20px 10px;
+            border-radius: 15px;
+            text-align: center;
+            opacity: 0.4;
+            transition: all 0.3s;
+        }
+
+        .badge.unlocked {
+            opacity: 1;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .badge .icon {
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+
+        .badge .name {
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        /* Safety Notes */
+        .notes-section {
+            background: white;
+        }
+
+        .notes-list {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .note-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .note-item:last-child {
+            border-bottom: none;
+        }
+
+        .note-item .icon {
+            font-size: 1.2rem;
+        }
+
+        .note-item p {
+            font-size: 0.95rem;
+        }
+
+        /* Backup Section */
+        .backup-section {
+            background: var(--secondary-light);
+            text-align: center;
+        }
+
+        .backup-info {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+        .backup-info p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+
+        .backup-btns {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .backup-btn {
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+        }
+
+        .backup-btn.export {
+            background: var(--secondary);
+            color: white;
+        }
+
+        .backup-btn.import {
+            background: white;
+            color: var(--charcoal);
+            border: 2px solid var(--charcoal);
+        }
+
+        .backup-btn.reset {
+            background: #ffebee;
+            color: #c62828;
+        }
+
+        .user-code {
+            background: var(--cream);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+            font-family: monospace;
+            font-size: 0.85rem;
+            word-break: break-all;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--secondary-light) 100%);
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .cta-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .cta-section p {
+            color: var(--text-light);
+            margin-bottom: 25px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            border: none;
+        }
+
+        .cta-btn.primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .cta-btn.secondary {
+            background: white;
+            color: var(--charcoal);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--charcoal);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .footer .disclaimer {
+            font-size: 0.85rem;
+            opacity: 0.7;
+            margin-bottom: 15px;
+        }
+
+        .footer .support-msg {
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        /* Toast */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: var(--charcoal);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            opacity: 0;
+            transition: all 0.3s;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+
+        /* Hidden file input */
+        #importFile {
+            display: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 500px) {
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+
+            .stats-bar {
+                grid-template-columns: repeat(2, 1fr);
+                margin: -20px 15px 15px;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .day-tabs {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .day-tab {
+                text-align: center;
+            }
+
+            .exercise-card {
+                flex-wrap: wrap;
+            }
+
+            .exercise-reps {
+                width: 100%;
+                text-align: center;
+                margin-top: 10px;
+            }
+
+            .badges-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>برنامج تمارين آمن بعد القيصرية</h1>
+            <p class="subtitle">برنامج جيم مصمم خصيصًا للأمهات بعد الولادة القيصرية مع مراعاة الرضاعة الطبيعية</p>
+            <button class="hero-btn" onclick="scrollToSchedule()">ابدئي الآن ✨</button>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <div class="container">
+        <div class="stats-bar">
+            <div class="stat-item">
+                <div class="stat-number" id="totalWorkouts">0</div>
+                <div class="stat-label">تمرين مكتمل</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" id="currentStreak">0</div>
+                <div class="stat-label">أيام متتالية</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" id="badgesCount">0</div>
+                <div class="stat-label">إنجاز</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" id="exercisesDone">0</div>
+                <div class="stat-label">تمرين اليوم</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- For Who Section -->
+    <section class="section for-who">
+        <div class="container">
+            <h2 class="section-title">لمن هذا البرنامج؟ <span></span></h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="icon">👶</div>
+                    <p>للأم بعد قيصرية<br>(4-6 أشهر)</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🤱</div>
+                    <p>للأم المرضعة<br>طبيعيًا</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">💪</div>
+                    <p>لمن تريد شد الجسم<br>بدون ضغط على البطن</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🌸</div>
+                    <p>لمن تبحث عن برنامج<br>آمن وغير قاسي</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Safe Section -->
+    <section class="section why-safe">
+        <div class="container">
+            <h2 class="section-title">لماذا هذا البرنامج آمن؟ <span></span></h2>
+            <div class="safety-list">
+                <div class="safety-item">
+                    <div class="check">✓</div>
+                    <p>تمارين بدون ضغط مباشر على البطن</p>
+                </div>
+                <div class="safety-item">
+                    <div class="check">✓</div>
+                    <p>تقوية تدريجية للعضلات</p>
+                </div>
+                <div class="safety-item">
+                    <div class="check">✓</div>
+                    <p>مراعاة الإرهاق وقلة النوم</p>
+                </div>
+                <div class="safety-item">
+                    <div class="check">✓</div>
+                    <p>مناسب مع الرضاعة الطبيعية</p>
+                </div>
+                <div class="safety-item">
+                    <div class="check">✓</div>
+                    <p>يعتمد على تمارين مثبتة وآمنة بعد العمليات</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section class="section schedule" id="schedule">
+        <div class="container">
+            <h2 class="section-title">جدول التمارين <span></span></h2>
+            
+            <div class="day-tabs">
+                <button class="day-tab active" data-day="1">اليوم الأول</button>
+                <button class="day-tab" data-day="2">اليوم الثاني</button>
+                <button class="day-tab" data-day="3">اليوم الثالث</button>
+            </div>
+
+            <!-- Day 1 -->
+            <div class="day-content active" id="day1">
+                <div class="day-header">
+                    <h3>💪 الجزء العلوي</h3>
+                    <p>تمارين الصدر والظهر والذراعين</p>
+                </div>
+
+                <div class="exercise-list">
+                    <div class="exercise-card" data-id="d1-e1">
+                        <div class="exercise-checkbox"></div>
+                        <div class="exercise-icon">🏋️</div>
+                        <div class="exercise-info">
+                            <div class="exercise-name">ضغط صدر بالدامبل</div>
+                            <div class="exercise-details">استلقي على البنش، ارفعي ببطء</div>
+                        </div>
+                        <div class="exercise-reps">3 × 12</div>
+                    </div>
+
+                    <div class="exercise-card" data-id="d1-e2">
+                        <div class="exercise-checkbox"></div>
+                        <div class="exercise-icon">🚣</div>
+                        <div class="exercise-info">
+                            <div class="exercise-name">سحب أرضي بالكيبل</div>
+                            <div class="exercise-details">اجلسي مستقيمة، اسحبي للصدر</div>
+                        </div>
+                        <div class="exercise-reps">3 × 12</div>
+                    </div>
+
+                    <div class="exercise-card" data-id="d1-e3">
+                        <div class="exercise-checkbox"></div>
+                        <div class="exercise-icon">🙆</div>
+                        <div class="exercise-info">
+                            <div class="exercise-name">رفع جانبي للكتف</div>
+                            <div class="exercise-details">ذراعين مستقيمتين، ارفعي للجانب</div>
+                        </div>
+                        <div class="exercise-reps">3 × 12</div>
+                    </div>
+
+                    <div class="exercise-card" data-id="d1-e4">
+                        <div class="exercise-checkbox"></div>
+                        <div class="exercise-icon">💪</div>
+                        <div class="exercise-info">
+                            <div class="exercise-name">بايسبس دامبل</div>
+                            <div class="exercise-details">ثبتي الكوع، ارفعي ببطء</div>
+                        </div>
+                        <div class="exercise-reps">3 × 12</div>
+                    </div>
+
+                    <div class="exercise-card" data-id="d1-e5">
+                        <div class="exercise-checkbox"></div>
+                        <div class="exercise-icon">🔻</div>
+                        <div class="exercise-info">
+                            <div class="exercise-name">ترايسبس بالحبل</div>
+                            <div class="exercise-details">ادفعي للأسفل، اضغطي العضلة</div>
+                        </div>
+                        <div class="exercise-reps">3 × 12</div>
+                    </div>
+                </div>
+
+                <div class="safety-tip">
+                    <div class="icon">⚠️</div>
+                    <p><strong>نصيحة أمان:</strong> تجنبي الأوزان الثقيلة جدًا، وتنفسي بانتظام أثناء التمرين</p>
+                </div>
+
+                <button class="complete-day-btn" data-day="1">✓ أكملت تمارين اليوم</button>
+            </div>
+
+            <!-- Day 2 -->
+            <div class="day-content" id="day2">
+                <div class="day-header">
+                    <h3>🍑 الجزء السفلي</h3>
+                    <p>تمارين الأرجل والمؤخرة</p>
+                </div>
+
+                <div class="exercise-list">
+                    <div class="exercise-card" data-id="d2-e1">
+                        <div class="exercise-checkbox"></div>
+                        <div class="exercise-icon">🦵</div>
+                        <div class="exercise-info">
+                            <div class="exercise-name">سكوات وزن الجسم</div>
+                            <div class="exercise-details">انزلي ببطء، حافظي على الظهر مستقيم</div>
+                        </div>
+                        <div class="exercise-reps">3 × 12</div>
+                    </div>
+
+                    <div class="exercise-card" data-id="d2-e2">
+                        <div class="exercise-checkbox"></div>
+                        <div class="exercise-icon">🌉</div>
+                        <div class="exercise-info">
+                            <div class="exercise-name">Glute Bridge</div>
+                            <div class="exercise-details">ارفعي الحوض، اضغطي المؤخرة</div>
+                        </div>
+                        <div class="exercise-reps">3 × 12</div>
+                    </div>
+
+                    <div class="exercise-card" data-id="d2-e3">
+                        <div class="exercise-checkbox"></div>
+                        <div class="exercise-icon">🦿</div>
+                        <div class="exercise-info">
+                            <div class="exercise-name">Hamstring Curl</div>
+                            <div class="exercise-details">على الجهاز، حركة بطيئة ومتحكمة</div>
+                        </div>
+                        <div class="exercise-reps">3 × 12</div>
+                    </div>
+
+                    <div class="exercise-card" data-id="d2-e4">
+                        <div class="exercise-checkbox"></div>
+                        <div class="exercise-icon">🦶</div>
+                        <div class="exercise-info">
+                            <div class="exercise-name">Leg Extension</div>
+                            <div class="exercise-details">على الجهاز، ارفعي ببطء</div>
+                        </div>
+                        <div class="exercise-reps">3 × 12</div>
+                    </div>
+                </div>
+
+                <div class="safety-tip">
+                    <div class="icon">⚠️</div>
+                    <p><strong>نصيحة أمان:</strong> تمارين الأرجل آمنة تمامًا بعد القيصرية - ركزي على التنفس</p>
+                </div>
+
+                <button class="complete-day-btn" data-day="2">✓ أكملت تمارين اليوم</button>
+            </div>
+
+            <!-- Day 3 -->
+            <div class="day-content" id="day3">
+                <div class="day-header">
+                    <h3>🔥 كور + كارديو</h3>
+                    <p>تمارين البطن الآمنة والقلب</p>
+                </div>
+
+                <div class="exercise-list">
+                    <div class="exercise-card" data-id="d3-e1">
+                        <div class="exercise-checkbox"></div>
+                        <div class="exercise-icon">📐</div>
+                        <div class="exercise-info">
+                            <div class="exercise-name">Plank على الركبتين</div>
+                            <div class="exercise-details">معدّل وآمن للقيصرية</div>
+                        </div>
+                        <div class="exercise-reps">3 × 30 ث</div>
+                    </div>
+
+                    <div class="exercise-card" data-id="d3-e2">
+                        <div class="exercise-checkbox"></div>
+                        <div class="exercise-icon">📏</div>
+                        <div class="exercise-info">
+                            <div class="exercise-name">Side Plank معدّل</div>
+                            <div class="exercise-details">الركبة السفلى على الأرض</div>
+                        </div>
+                        <div class="exercise-reps">3 × 30 ث</div>
+                    </div>
+
+                    <div class="exercise-card" data-id="d3-e3">
+                        <div class="exercise-checkbox"></div>
+                        <div class="exercise-icon">🐕</div>
+                        <div class="exercise-info">
+                            <div class="exercise-name">Bird Dog</div>
+                            <div class="exercise-details">ذراع وساق معاكسين، ثبات</div>
+                        </div>
+                        <div class="exercise-reps">3 × 12</div>
+                    </div>
+
+                    <div class="exercise-card" data-id="d3-e4">
+                        <div class="exercise-checkbox"></div>
+                        <div class="exercise-icon">🚶</div>
+                        <div class="exercise-info">
+                            <div class="exercise-name">مشي سريع أو دراجة</div>
+                            <div class="exercise-details">كارديو خفيف ومريح</div>
+                        </div>
+                        <div class="exercise-reps">20 دقيقة</div>
+                    </div>
+                </div>
+
+                <div class="safety-tip">
+                    <div class="icon">⚠️</div>
+                    <p><strong>نصيحة أمان:</strong> لا كرانشز تقليدية! هذه التمارين المعدّلة أفضل وأكثر فعالية</p>
+                </div>
+
+                <button class="complete-day-btn" data-day="3">✓ أكملت تمارين اليوم</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Progress Section -->
+    <section class="section progress-section">
+        <div class="container">
+            <h2 class="section-title">تقدمك وإنجازاتك <span></span></h2>
+            
+            <div class="streak-card">
+                <div class="streak-stars" id="streakStars">☆☆☆</div>
+                <div class="streak-level" id="streakLevel">ابدئي رحلتك!</div>
+                <div class="streak-progress" id="streakProgress">أكملي 3 تمارين للنجمة البرونزية</div>
+            </div>
+
+            <h3 style="text-align: center; margin-bottom: 15px;">🏆 الإنجازات</h3>
+            <div class="badges-grid">
+                <div class="badge" data-badge="first-workout">
+                    <div class="icon">🌟</div>
+                    <div class="name">أول تمرين</div>
+                </div>
+                <div class="badge" data-badge="first-week">
+                    <div class="icon">🔥</div>
+                    <div class="name">أول أسبوع</div>
+                </div>
+                <div class="badge" data-badge="consistency">
+                    <div class="icon">👑</div>
+                    <div class="name">ملكة الاستمرارية</div>
+                </div>
+                <div class="badge" data-badge="strong-mom">
+                    <div class="icon">💪</div>
+                    <div class="name">أم قوية</div>
+                </div>
+                <div class="badge" data-badge="core-queen">
+                    <div class="icon">🎯</div>
+                    <div class="name">ملكة الكور</div>
+                </div>
+                <div class="badge" data-badge="self-love">
+                    <div class="icon">💖</div>
+                    <div class="name">حب الذات</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Safety Notes -->
+    <section class="section notes-section">
+        <div class="container">
+            <h2 class="section-title">ملاحظات السلامة <span></span></h2>
+            <div class="notes-list">
+                <div class="note-item">
+                    <div class="icon">🛑</div>
+                    <p>توقفي فورًا عند أي ألم في منطقة القيصرية</p>
+                </div>
+                <div class="note-item">
+                    <div class="icon">💧</div>
+                    <p>اشربي ماء كافي قبل وبعد التمرين</p>
+                </div>
+                <div class="note-item">
+                    <div class="icon">🤱</div>
+                    <p>يفضل التمرين بعد الرضاعة مباشرة</p>
+                </div>
+                <div class="note-item">
+                    <div class="icon">🚫</div>
+                    <p>لا تمارين بطن تقليدية (كرانشز)</p>
+                </div>
+                <div class="note-item">
+                    <div class="icon">👩‍⚕️</div>
+                    <p>استشيري الطبيب في حال وجود ألم مستمر</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Backup Section -->
+    <section class="section backup-section">
+        <div class="container">
+            <h2 class="section-title">حفظ التقدم <span></span></h2>
+            <div class="backup-info">
+                <p>💾 احفظي تقدمك حتى لا تخسريه! يمكنك تصدير بياناتك واستيرادها في أي وقت</p>
+                <div class="backup-btns">
+                    <button class="backup-btn export" onclick="exportData()">📤 تصدير البيانات</button>
+                    <button class="backup-btn import" onclick="document.getElementById('importFile').click()">📥 استيراد البيانات</button>
+                    <button class="backup-btn reset" onclick="resetProgress()">🗑️ إعادة تعيين</button>
+                </div>
+                <input type="file" id="importFile" accept=".json" onchange="importData(event)">
+                <div class="user-code" id="lastBackup" style="display: none;">
+                    آخر نسخة احتياطية: <span id="backupDate"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>جاهزة للبداية؟ 💪</h2>
+            <p>كل خطوة صغيرة هي انتصار كبير</p>
+            <div class="cta-buttons">
+                <button class="cta-btn primary" onclick="scrollToSchedule()">ابدئي التمرين</button>
+                <button class="cta-btn secondary" onclick="exportData()">احفظي الجدول</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="disclaimer">⚠️ هذا البرنامج للإرشاد العام فقط. استشيري طبيبك قبل البدء بأي برنامج رياضي بعد الولادة.</p>
+            <p class="support-msg">جسمك قوي… فقط يحتاج وقت وصبر 🤍</p>
+        </div>
+    </footer>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <script>
+        // Initialize data
+        let appData = JSON.parse(localStorage.getItem('postpartumFitnessAR')) || {
+            exercises: {},
+            completedDays: [],
+            totalWorkouts: 0,
+            dayCounters: { 1: 0, 2: 0, 3: 0 },
+            badges: [],
+            currentStreak: 0,
+            lastWorkoutDate: null,
+            lastBackup: null
+        };
+
+        // Save to localStorage
+        function saveData() {
+            localStorage.setItem('postpartumFitnessAR', JSON.stringify(appData));
+        }
+
+        // Show toast
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 2500);
+        }
+
+        // Update UI
+        function updateUI() {
+            document.getElementById('totalWorkouts').textContent = appData.totalWorkouts;
+            document.getElementById('currentStreak').textContent = appData.currentStreak;
+            document.getElementById('badgesCount').textContent = appData.badges.length;
+            
+            // Count today's exercises
+            let todayCount = 0;
+            Object.values(appData.exercises).forEach(val => { if(val) todayCount++; });
+            document.getElementById('exercisesDone').textContent = todayCount;
+
+            // Update streak display
+            updateStreakDisplay();
+
+            // Update badges
+            appData.badges.forEach(badgeId => {
+                const badge = document.querySelector(`.badge[data-badge="${badgeId}"]`);
+                if (badge) badge.classList.add('unlocked');
+            });
+
+            // Update exercise checkboxes
+            document.querySelectorAll('.exercise-card').forEach(card => {
+                const id = card.dataset.id;
+                if (appData.exercises[id]) {
+                    card.classList.add('completed');
+                    card.querySelector('.exercise-checkbox').innerHTML = '✓';
+                }
+            });
+
+            // Check completed days for today
+            const today = new Date().toDateString();
+            for (let day = 1; day <= 3; day++) {
+                const dayKey = `day${day}-${today}`;
+                if (appData.completedDays.includes(dayKey)) {
+                    const btn = document.querySelector(`.complete-day-btn[data-day="${day}"]`);
+                    if (btn) {
+                        btn.classList.add('completed');
+                        btn.textContent = '✓ مكتمل اليوم!';
+                        btn.disabled = true;
+                    }
+                }
+            }
+
+            // Show last backup
+            if (appData.lastBackup) {
+                document.getElementById('lastBackup').style.display = 'block';
+                document.getElementById('backupDate').textContent = new Date(appData.lastBackup).toLocaleDateString('ar-EG');
+            }
+        }
+
+        // Update streak display
+        function updateStreakDisplay() {
+            const streak = appData.currentStreak;
+            const starsEl = document.getElementById('streakStars');
+            const levelEl = document.getElementById('streakLevel');
+            const progressEl = document.getElementById('streakProgress');
+
+            if (streak >= 9) {
+                starsEl.textContent = '⭐⭐⭐';
+                levelEl.textContent = 'نجمة ذهبية! رائعة!';
+                progressEl.textContent = 'أنتِ لا تُوقَفين!';
+            } else if (streak >= 6) {
+                starsEl.textContent = '⭐⭐☆';
+                levelEl.textContent = 'نجمة فضية!';
+                progressEl.textContent = `${9 - streak} تمارين للذهبية!`;
+            } else if (streak >= 3) {
+                starsEl.textContent = '⭐☆☆';
+                levelEl.textContent = 'نجمة برونزية!';
+                progressEl.textContent = `${6 - streak} تمارين للفضية!`;
+            } else {
+                starsEl.textContent = '☆☆☆';
+                levelEl.textContent = 'ابدئي رحلتك!';
+                progressEl.textContent = `${3 - streak} تمارين للبرونزية`;
+            }
+        }
+
+        // Check and award badges
+        function checkBadges() {
+            const newBadges = [];
+
+            if (appData.totalWorkouts >= 1 && !appData.badges.includes('first-workout')) {
+                appData.badges.push('first-workout');
+                newBadges.push('🌟 أول تمرين!');
+            }
+
+            if (appData.totalWorkouts >= 3 && !appData.badges.includes('first-week')) {
+                appData.badges.push('first-week');
+                newBadges.push('🔥 أول أسبوع!');
+            }
+
+            if (appData.currentStreak >= 6 && !appData.badges.includes('consistency')) {
+                appData.badges.push('consistency');
+                newBadges.push('👑 ملكة الاستمرارية!');
+            }
+
+            if (appData.totalWorkouts >= 10 && !appData.badges.includes('strong-mom')) {
+                appData.badges.push('strong-mom');
+                newBadges.push('💪 أم قوية!');
+            }
+
+            if (appData.dayCounters[3] >= 5 && !appData.badges.includes('core-queen')) {
+                appData.badges.push('core-queen');
+                newBadges.push('🎯 ملكة الكور!');
+            }
+
+            if (appData.totalWorkouts >= 15 && !appData.badges.includes('self-love')) {
+                appData.badges.push('self-love');
+                newBadges.push('💖 حب الذات!');
+            }
+
+            if (newBadges.length > 0) {
+                showToast('إنجاز جديد: ' + newBadges[0]);
+            }
+        }
+
+        // Complete a day
+        function completeDay(dayNum) {
+            const today = new Date().toDateString();
+            const dayKey = `day${dayNum}-${today}`;
+            
+            if (appData.completedDays.includes(dayKey)) {
+                showToast('مكتمل بالفعل اليوم!');
+                return;
+            }
+
+            appData.completedDays.push(dayKey);
+            appData.totalWorkouts++;
+            appData.dayCounters[dayNum]++;
+
+            // Update streak
+            if (appData.lastWorkoutDate !== today) {
+                const yesterday = new Date();
+                yesterday.setDate(yesterday.getDate() - 1);
+                if (appData.lastWorkoutDate === yesterday.toDateString() || appData.lastWorkoutDate === null) {
+                    appData.currentStreak++;
+                } else {
+                    appData.currentStreak = 1;
+                }
+                appData.lastWorkoutDate = today;
+            }
+
+            checkBadges();
+            saveData();
+            updateUI();
+
+            const btn = document.querySelector(`.complete-day-btn[data-day="${dayNum}"]`);
+            btn.classList.add('completed');
+            btn.textContent = '✓ مكتمل اليوم!';
+            btn.disabled = true;
+
+            showToast('🎉 أحسنتِ! استمري!');
+        }
+
+        // Export data
+        function exportData() {
+            appData.lastBackup = new Date().toISOString();
+            saveData();
+
+            const dataStr = JSON.stringify(appData, null, 2);
+            const blob = new Blob([dataStr], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `fitness-backup-${new Date().toISOString().split('T')[0]}.json`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+
+            showToast('✅ تم حفظ النسخة الاحتياطية!');
+            updateUI();
+        }
+
+        // Import data
+        function importData(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const importedData = JSON.parse(e.target.result);
+                    appData = importedData;
+                    saveData();
+                    
+                    // Reset UI and reload
+                    document.querySelectorAll('.exercise-card').forEach(card => {
+                        card.classList.remove('completed');
+                        card.querySelector('.exercise-checkbox').innerHTML = '';
+                    });
+                    document.querySelectorAll('.badge').forEach(b => b.classList.remove('unlocked'));
+                    document.querySelectorAll('.complete-day-btn').forEach(btn => {
+                        btn.classList.remove('completed');
+                        btn.disabled = false;
+                        btn.textContent = '✓ أكملت تمارين اليوم';
+                    });
+
+                    updateUI();
+                    showToast('✅ تم استيراد البيانات بنجاح!');
+                } catch (error) {
+                    showToast('❌ خطأ في الملف!');
+                }
+            };
+            reader.readAsText(file);
+            event.target.value = '';
+        }
+
+        // Reset progress
+        function resetProgress() {
+            if (confirm('هل أنتِ متأكدة؟ سيتم حذف كل التقدم!')) {
+                localStorage.removeItem('postpartumFitnessAR');
+                appData = {
+                    exercises: {},
+                    completedDays: [],
+                    totalWorkouts: 0,
+                    dayCounters: { 1: 0, 2: 0, 3: 0 },
+                    badges: [],
+                    currentStreak: 0,
+                    lastWorkoutDate: null,
+                    lastBackup: null
+                };
+                
+                document.querySelectorAll('.exercise-card').forEach(card => {
+                    card.classList.remove('completed');
+                    card.querySelector('.exercise-checkbox').innerHTML = '';
+                });
+                document.querySelectorAll('.badge').forEach(b => b.classList.remove('unlocked'));
+                document.querySelectorAll('.complete-day-btn').forEach(btn => {
+                    btn.classList.remove('completed');
+                    btn.disabled = false;
+                    btn.textContent = '✓ أكملت تمارين اليوم';
+                });
+
+                updateUI();
+                showToast('تم إعادة التعيين');
+            }
+        }
+
+        // Scroll to schedule
+        function scrollToSchedule() {
+            document.getElementById('schedule').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Event Listeners
+        document.addEventListener('DOMContentLoaded', () => {
+            updateUI();
+
+            // Day tabs
+            document.querySelectorAll('.day-tab').forEach(tab => {
+                tab.addEventListener('click', () => {
+                    document.querySelectorAll('.day-tab').forEach(t => t.classList.remove('active'));
+                    document.querySelectorAll('.day-content').forEach(d => d.classList.remove('active'));
+                    
+                    tab.classList.add('active');
+                    document.getElementById(`day${tab.dataset.day}`).classList.add('active');
+                });
+            });
+
+            // Exercise cards
+            document.querySelectorAll('.exercise-card').forEach(card => {
+                card.addEventListener('click', () => {
+                    const id = card.dataset.id;
+                    const isCompleted = card.classList.toggle('completed');
+                    appData.exercises[id] = isCompleted;
+                    card.querySelector('.exercise-checkbox').innerHTML = isCompleted ? '✓' : '';
+                    saveData();
+                    updateUI();
+                });
+            });
+
+            // Complete day buttons
+            document.querySelectorAll('.complete-day-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    completeDay(parseInt(btn.dataset.day));
+                });
+            });
+        });
+    </script>
+</body>
+</html>
