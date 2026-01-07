@@ -17,11 +17,7 @@
             --text-light: #666;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Tajawal', sans-serif;
@@ -31,32 +27,16 @@
             font-size: 16px;
         }
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+        .container { max-width: 800px; margin: 0 auto; padding: 0 20px; }
 
-        /* Hero Section */
+        /* Hero */
         .hero {
             background: linear-gradient(135deg, var(--primary-light) 0%, var(--cream) 50%, var(--secondary-light) 100%);
             padding: 50px 20px;
             text-align: center;
         }
-
-        .hero h1 {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--charcoal);
-            margin-bottom: 12px;
-        }
-
-        .hero .subtitle {
-            font-size: 1rem;
-            color: var(--text-light);
-            margin-bottom: 25px;
-        }
-
+        .hero h1 { font-size: 1.8rem; font-weight: 800; margin-bottom: 12px; }
+        .hero .subtitle { font-size: 1rem; color: var(--text-light); margin-bottom: 25px; }
         .hero-btn {
             display: inline-block;
             background: linear-gradient(135deg, var(--primary) 0%, #C9B1B1 100%);
@@ -64,13 +44,11 @@
             padding: 14px 35px;
             border-radius: 50px;
             font-weight: 700;
-            font-size: 1rem;
             border: none;
             cursor: pointer;
-            transition: all 0.3s;
         }
 
-        /* Stats Bar */
+        /* Stats */
         .stats-bar {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -83,22 +61,9 @@
             position: relative;
             z-index: 10;
         }
-
-        .stat-item {
-            text-align: center;
-            padding: 8px 5px;
-        }
-
-        .stat-number {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--primary);
-        }
-
-        .stat-label {
-            font-size: 0.7rem;
-            color: var(--text-light);
-        }
+        .stat-item { text-align: center; padding: 8px 5px; }
+        .stat-number { font-size: 1.5rem; font-weight: 800; color: var(--primary); }
+        .stat-label { font-size: 0.7rem; color: var(--text-light); }
 
         /* Week Selector */
         .week-selector {
@@ -108,78 +73,29 @@
             border-radius: 15px;
             text-align: center;
         }
-
-        .week-selector h3 {
-            margin-bottom: 15px;
-            font-size: 1.1rem;
-        }
-
-        .week-nav {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-        }
-
+        .week-selector h3 { margin-bottom: 15px; font-size: 1.1rem; }
+        .week-nav { display: flex; align-items: center; justify-content: center; gap: 20px; }
         .week-nav-btn {
-            width: 40px;
-            height: 40px;
+            width: 40px; height: 40px;
             border-radius: 50%;
             border: 2px solid var(--primary);
             background: white;
             cursor: pointer;
             font-size: 1.2rem;
-            transition: all 0.3s;
         }
-
-        .week-nav-btn:hover {
-            background: var(--primary);
-            color: white;
-        }
-
-        .current-week {
-            font-size: 1.3rem;
-            font-weight: 700;
-            min-width: 120px;
-        }
-
-        .week-progress {
-            margin-top: 15px;
-            display: flex;
-            justify-content: center;
-            gap: 8px;
-        }
-
-        .week-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: #ddd;
-            transition: all 0.3s;
-        }
-
+        .week-nav-btn:hover { background: var(--primary); color: white; }
+        .current-week { font-size: 1.3rem; font-weight: 700; min-width: 120px; }
+        .week-progress { margin-top: 15px; display: flex; justify-content: center; gap: 8px; }
+        .week-dot { width: 12px; height: 12px; border-radius: 50%; background: #ddd; }
         .week-dot.completed { background: var(--secondary); }
         .week-dot.current { background: var(--primary); transform: scale(1.3); }
 
         /* Sections */
-        .section {
-            padding: 30px 15px;
-        }
+        .section { padding: 30px 15px; }
+        .section-title { font-size: 1.3rem; font-weight: 700; text-align: center; margin-bottom: 20px; }
 
-        .section-title {
-            font-size: 1.3rem;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        /* Feature Cards */
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-        }
-
+        /* Features */
+        .feature-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
         .feature-card {
             background: white;
             padding: 18px 12px;
@@ -187,45 +103,24 @@
             text-align: center;
             box-shadow: 0 3px 15px rgba(0,0,0,0.05);
         }
-
         .feature-card .icon { font-size: 1.8rem; margin-bottom: 8px; }
         .feature-card p { font-size: 0.85rem; }
 
-        /* Safety Section */
+        /* Safety */
         .safety-section { background: var(--secondary-light); }
-
-        .safety-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 10px 0;
-            font-size: 0.95rem;
-        }
-
+        .safety-item { display: flex; align-items: center; gap: 12px; padding: 10px 0; font-size: 0.95rem; }
         .safety-item .check {
-            width: 24px;
-            height: 24px;
+            width: 24px; height: 24px;
             background: var(--secondary);
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 0.8rem;
-            flex-shrink: 0;
+            display: flex; align-items: center; justify-content: center;
+            color: white; font-size: 0.8rem; flex-shrink: 0;
         }
 
         /* Day Tabs */
-        .day-tabs {
-            display: flex;
-            gap: 8px;
-            margin-bottom: 15px;
-            justify-content: center;
-        }
-
+        .day-tabs { display: flex; gap: 8px; margin-bottom: 15px; justify-content: center; }
         .day-tab {
-            flex: 1;
-            max-width: 120px;
+            flex: 1; max-width: 120px;
             padding: 12px 8px;
             border: 2px solid var(--primary);
             background: white;
@@ -234,10 +129,8 @@
             font-family: 'Tajawal', sans-serif;
             font-size: 0.85rem;
             font-weight: 600;
-            transition: all 0.3s;
             text-align: center;
         }
-
         .day-tab.active { background: var(--primary); color: white; }
         .day-tab.done { background: var(--secondary); border-color: var(--secondary); color: white; }
         .day-tab .status { display: block; font-size: 0.7rem; font-weight: 400; margin-top: 3px; }
@@ -245,11 +138,7 @@
         /* Day Content */
         .day-content { display: none; animation: fadeIn 0.3s ease; }
         .day-content.active { display: block; }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
         .day-header {
             text-align: center;
@@ -258,7 +147,6 @@
             border-radius: 15px;
             margin-bottom: 15px;
         }
-
         .day-header h3 { font-size: 1.2rem; }
         .day-header p { font-size: 0.85rem; color: var(--text-light); }
 
@@ -269,49 +157,29 @@
             margin-bottom: 15px;
             overflow: hidden;
             box-shadow: 0 3px 15px rgba(0,0,0,0.05);
-            transition: all 0.3s;
             border: 2px solid transparent;
         }
+        .exercise-card.completed { border-color: var(--secondary); background: var(--secondary-light); }
 
-        .exercise-card.completed {
-            border-color: var(--secondary);
-            background: var(--secondary-light);
-        }
-
-        /* Exercise Visual - Illustration Style */
-        .exercise-visual {
+        /* Exercise GIF Container */
+        .exercise-gif {
             width: 100%;
-            height: 200px;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            height: 220px;
+            background: #f5f5f5;
             position: relative;
             overflow: hidden;
         }
-
-        .exercise-visual .illustration {
-            text-align: center;
+        .exercise-gif img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
-
-        .exercise-visual .exercise-icon {
-            font-size: 4rem;
-            margin-bottom: 10px;
-            display: block;
+        .exercise-gif video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
-
-        .exercise-visual .exercise-label {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--charcoal);
-            background: white;
-            padding: 8px 20px;
-            border-radius: 25px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        /* Muscle Target Visual */
-        .muscle-indicator {
+        .muscle-badge {
             position: absolute;
             top: 10px;
             left: 10px;
@@ -321,50 +189,28 @@
             border-radius: 20px;
             font-size: 0.75rem;
             font-weight: 600;
+            z-index: 5;
         }
 
-        .exercise-body {
-            padding: 15px;
-        }
-
-        .exercise-top {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            margin-bottom: 10px;
-        }
-
+        .exercise-body { padding: 15px; }
+        .exercise-top { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 10px; }
         .exercise-checkbox {
-            width: 30px;
-            height: 30px;
+            width: 30px; height: 30px;
             border: 2px solid var(--primary);
             border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            flex-shrink: 0;
-            transition: all 0.3s;
-            font-size: 1rem;
+            display: flex; align-items: center; justify-content: center;
+            cursor: pointer; flex-shrink: 0; font-size: 1rem;
         }
-
         .exercise-card.completed .exercise-checkbox {
             background: var(--secondary);
             border-color: var(--secondary);
             color: white;
         }
-
         .exercise-info { flex: 1; }
         .exercise-name { font-weight: 700; font-size: 1.05rem; margin-bottom: 5px; }
         .exercise-name-en { font-size: 0.8rem; color: var(--text-light); font-weight: 400; }
 
-        .exercise-details {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-top: 10px;
-        }
-
+        .exercise-details { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px; }
         .exercise-tag {
             background: var(--primary-light);
             padding: 5px 12px;
@@ -372,53 +218,23 @@
             font-size: 0.8rem;
             font-weight: 500;
         }
-
         .exercise-tag.reps { background: var(--primary); color: white; }
 
-        .exercise-instructions {
-            background: var(--cream);
-            padding: 12px;
-            border-radius: 10px;
-            margin-top: 12px;
-            font-size: 0.9rem;
-        }
-
-        .exercise-instructions strong { color: var(--primary); }
-
-        /* Step by Step */
         .exercise-steps {
             margin-top: 12px;
             padding: 12px;
             background: #f8f9fa;
             border-radius: 10px;
         }
-
-        .exercise-steps h5 {
-            font-size: 0.85rem;
-            margin-bottom: 8px;
-            color: var(--primary);
-        }
-
-        .step {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            margin-bottom: 8px;
-            font-size: 0.85rem;
-        }
-
+        .exercise-steps h5 { font-size: 0.85rem; margin-bottom: 8px; color: var(--primary); }
+        .step { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; font-size: 0.85rem; }
         .step-num {
-            width: 22px;
-            height: 22px;
+            width: 22px; height: 22px;
             background: var(--primary);
             color: white;
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.7rem;
-            font-weight: 700;
-            flex-shrink: 0;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.7rem; font-weight: 700; flex-shrink: 0;
         }
 
         .safety-note {
@@ -431,10 +247,9 @@
             align-items: flex-start;
             gap: 8px;
         }
-
         .safety-note.good { background: #E8F5E9; }
 
-        /* Complete Day Button */
+        /* Complete Button */
         .complete-day-btn {
             width: 100%;
             padding: 16px;
@@ -447,15 +262,12 @@
             font-weight: 700;
             cursor: pointer;
             margin-top: 15px;
-            transition: all 0.3s;
         }
-
         .complete-day-btn:disabled { background: #ccc; cursor: not-allowed; }
         .complete-day-btn.completed { background: var(--secondary); }
 
-        /* Progress Section */
+        /* Progress */
         .progress-section { background: var(--primary-light); }
-
         .streak-card {
             background: linear-gradient(135deg, var(--gold) 0%, #E8C547 100%);
             padding: 20px;
@@ -464,20 +276,11 @@
             color: white;
             margin-bottom: 15px;
         }
-
         .streak-stars { font-size: 2rem; margin-bottom: 8px; }
         .streak-level { font-size: 1.1rem; font-weight: 700; }
 
-        /* Weeks History */
-        .weeks-history {
-            background: white;
-            border-radius: 15px;
-            padding: 15px;
-            margin-top: 15px;
-        }
-
+        .weeks-history { background: white; border-radius: 15px; padding: 15px; margin-top: 15px; }
         .weeks-history h4 { margin-bottom: 12px; font-size: 1rem; }
-
         .week-history-item {
             display: flex;
             align-items: center;
@@ -485,87 +288,50 @@
             padding: 10px 0;
             border-bottom: 1px solid #f0f0f0;
         }
-
         .week-history-item:last-child { border-bottom: none; }
         .week-history-item .week-name { font-weight: 600; }
         .week-history-item .week-status { display: flex; gap: 5px; }
-
         .week-history-item .day-indicator {
-            width: 24px;
-            height: 24px;
+            width: 24px; height: 24px;
             border-radius: 6px;
             background: #eee;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.7rem;
-            font-weight: 600;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.7rem; font-weight: 600;
         }
-
         .week-history-item .day-indicator.done { background: var(--secondary); color: white; }
 
         /* Badges */
-        .badges-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            margin-top: 15px;
-        }
-
+        .badges-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 15px; }
         .badge {
             background: white;
             padding: 15px 8px;
             border-radius: 12px;
             text-align: center;
             opacity: 0.4;
-            transition: all 0.3s;
         }
-
         .badge.unlocked { opacity: 1; box-shadow: 0 3px 15px rgba(0,0,0,0.1); }
         .badge .icon { font-size: 1.8rem; margin-bottom: 5px; }
         .badge .name { font-size: 0.7rem; font-weight: 600; }
 
-        /* Backup Section */
-        .backup-section {
-            background: white;
-            margin: 15px;
-            border-radius: 15px;
-            padding: 20px;
-        }
-
+        /* Backup */
+        .backup-section { background: white; margin: 15px; border-radius: 15px; padding: 20px; }
         .backup-section h3 { text-align: center; margin-bottom: 15px; font-size: 1.1rem; }
-
-        .backup-code-display {
-            background: var(--cream);
-            padding: 15px;
-            border-radius: 10px;
-            text-align: center;
-            margin-bottom: 15px;
-        }
-
+        .backup-code-display { background: var(--cream); padding: 15px; border-radius: 10px; text-align: center; margin-bottom: 15px; }
         .backup-code-display p { font-size: 0.85rem; color: var(--text-light); margin-bottom: 10px; }
-
         .backup-code {
             font-family: monospace;
-            font-size: 1.1rem;
+            font-size: 0.9rem;
             font-weight: 700;
-            letter-spacing: 1px;
             color: var(--charcoal);
             background: white;
-            padding: 12px 20px;
+            padding: 12px 15px;
             border-radius: 8px;
-            display: inline-block;
-            user-select: all;
+            display: block;
             word-break: break-all;
+            max-height: 80px;
+            overflow-y: auto;
         }
-
-        .backup-btns {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
+        .backup-btns { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
         .backup-btn {
             padding: 10px 20px;
             border-radius: 20px;
@@ -574,16 +340,12 @@
             font-weight: 600;
             cursor: pointer;
             border: none;
-            transition: all 0.3s;
         }
-
         .backup-btn.copy { background: var(--secondary); color: white; }
         .backup-btn.restore { background: var(--primary); color: white; }
         .backup-btn.reset { background: #ffebee; color: #c62828; }
-
         .restore-input { margin-top: 15px; display: none; }
         .restore-input.show { display: block; }
-
         .restore-input input {
             width: 100%;
             padding: 12px;
@@ -593,7 +355,6 @@
             font-size: 1rem;
             text-align: center;
         }
-
         .restore-input button {
             width: 100%;
             margin-top: 10px;
@@ -607,21 +368,9 @@
             cursor: pointer;
         }
 
-        /* Notes Section */
-        .notes-section {
-            background: white;
-            margin: 15px;
-            border-radius: 15px;
-            padding: 20px;
-        }
-
-        .note-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            padding: 8px 0;
-            font-size: 0.9rem;
-        }
+        /* Notes */
+        .notes-section { background: white; margin: 15px; border-radius: 15px; padding: 20px; }
+        .note-item { display: flex; align-items: flex-start; gap: 10px; padding: 8px 0; font-size: 0.9rem; }
 
         /* Footer */
         .footer {
@@ -631,7 +380,6 @@
             text-align: center;
             margin-top: 20px;
         }
-
         .footer .disclaimer { font-size: 0.8rem; opacity: 0.7; margin-bottom: 10px; }
         .footer .support-msg { font-size: 1rem; }
 
@@ -650,20 +398,16 @@
             transition: all 0.3s;
             z-index: 1000;
         }
-
         .toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
 
         @media (max-width: 500px) {
-            .stats-bar { grid-template-columns: repeat(4, 1fr); gap: 5px; }
-            .stat-number { font-size: 1.3rem; }
-            .exercise-visual { height: 160px; }
-            .exercise-visual .exercise-icon { font-size: 3rem; }
+            .exercise-gif { height: 180px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section class="hero">
         <div class="container">
             <h1>برنامج تمارين آمن بعد القيصرية</h1>
@@ -672,7 +416,7 @@
         </div>
     </section>
 
-    <!-- Stats Bar -->
+    <!-- Stats -->
     <div class="container">
         <div class="stats-bar">
             <div class="stat-item">
@@ -705,27 +449,15 @@
         <div class="week-progress" id="weekProgress"></div>
     </div>
 
-    <!-- For Who Section -->
+    <!-- For Who -->
     <section class="section">
         <div class="container">
             <h2 class="section-title">👩‍👧 لمن هذا البرنامج؟</h2>
             <div class="feature-grid">
-                <div class="feature-card">
-                    <div class="icon">👶</div>
-                    <p>للأم بعد قيصرية<br>(4-6 أشهر)</p>
-                </div>
-                <div class="feature-card">
-                    <div class="icon">🤱</div>
-                    <p>للأم المرضعة<br>طبيعيًا</p>
-                </div>
-                <div class="feature-card">
-                    <div class="icon">💪</div>
-                    <p>شد الجسم بدون<br>ضغط على البطن</p>
-                </div>
-                <div class="feature-card">
-                    <div class="icon">🌸</div>
-                    <p>برنامج آمن<br>وغير قاسي</p>
-                </div>
+                <div class="feature-card"><div class="icon">👶</div><p>للأم بعد قيصرية<br>(4-6 أشهر)</p></div>
+                <div class="feature-card"><div class="icon">🤱</div><p>للأم المرضعة<br>طبيعيًا</p></div>
+                <div class="feature-card"><div class="icon">💪</div><p>شد الجسم بدون<br>ضغط على البطن</p></div>
+                <div class="feature-card"><div class="icon">🌸</div><p>برنامج آمن<br>وغير قاسي</p></div>
             </div>
         </div>
     </section>
@@ -734,43 +466,22 @@
     <section class="section safety-section">
         <div class="container">
             <h2 class="section-title">🛡️ لماذا هذا البرنامج آمن؟</h2>
-            <div class="safety-item">
-                <div class="check">✓</div>
-                <p>تمارين بدون ضغط مباشر على البطن</p>
-            </div>
-            <div class="safety-item">
-                <div class="check">✓</div>
-                <p>تقوية تدريجية للعضلات</p>
-            </div>
-            <div class="safety-item">
-                <div class="check">✓</div>
-                <p>مراعاة الإرهاق وقلة النوم</p>
-            </div>
-            <div class="safety-item">
-                <div class="check">✓</div>
-                <p>مناسب مع الرضاعة الطبيعية</p>
-            </div>
+            <div class="safety-item"><div class="check">✓</div><p>تمارين بدون ضغط مباشر على البطن</p></div>
+            <div class="safety-item"><div class="check">✓</div><p>تقوية تدريجية للعضلات</p></div>
+            <div class="safety-item"><div class="check">✓</div><p>مراعاة الإرهاق وقلة النوم</p></div>
+            <div class="safety-item"><div class="check">✓</div><p>مناسب مع الرضاعة الطبيعية</p></div>
         </div>
     </section>
 
-    <!-- Schedule Section -->
+    <!-- Schedule -->
     <section class="section" id="schedule">
         <div class="container">
             <h2 class="section-title">🏋️ جدول الأسبوع</h2>
             
             <div class="day-tabs">
-                <button class="day-tab active" data-day="1">
-                    اليوم 1
-                    <span class="status">الجزء العلوي</span>
-                </button>
-                <button class="day-tab" data-day="2">
-                    اليوم 2
-                    <span class="status">الجزء السفلي</span>
-                </button>
-                <button class="day-tab" data-day="3">
-                    اليوم 3
-                    <span class="status">كور + كارديو</span>
-                </button>
+                <button class="day-tab active" data-day="1">اليوم 1<span class="status">الجزء العلوي</span></button>
+                <button class="day-tab" data-day="2">اليوم 2<span class="status">الجزء السفلي</span></button>
+                <button class="day-tab" data-day="3">اليوم 3<span class="status">كور + كارديو</span></button>
             </div>
 
             <!-- Day 1: Upper Body -->
@@ -780,14 +491,11 @@
                     <p>تمارين الصدر والظهر والذراعين</p>
                 </div>
 
-                <!-- Exercise 1: Chest Press -->
+                <!-- Exercise 1: Dumbbell Chest Press -->
                 <div class="exercise-card" data-id="d1-e1">
-                    <div class="exercise-visual">
-                        <div class="muscle-indicator">💪 صدر</div>
-                        <div class="illustration">
-                            <span class="exercise-icon">🏋️‍♀️</span>
-                            <span class="exercise-label">ضغط صدر بالدامبل</span>
-                        </div>
+                    <div class="exercise-gif">
+                        <div class="muscle-badge">💪 صدر</div>
+                        <img src="https://gymvisual.com/img/p/8/9/4/6/8946.gif" onerror="this.src='https://www.jefit.com/images/exercises/800_600/5.gif'">
                     </div>
                     <div class="exercise-body">
                         <div class="exercise-top">
@@ -802,38 +510,19 @@
                         </div>
                         <div class="exercise-steps">
                             <h5>📋 خطوات التنفيذ:</h5>
-                            <div class="step">
-                                <span class="step-num">1</span>
-                                <span>استلقي على البنش مع إمساك الدامبل في كل يد</span>
-                            </div>
-                            <div class="step">
-                                <span class="step-num">2</span>
-                                <span>ارفعي الدامبل فوق صدرك مع فرد الذراعين</span>
-                            </div>
-                            <div class="step">
-                                <span class="step-num">3</span>
-                                <span>انزلي ببطء حتى يصبح الكوع بزاوية 90 درجة</span>
-                            </div>
-                            <div class="step">
-                                <span class="step-num">4</span>
-                                <span>ادفعي للأعلى مع الزفير</span>
-                            </div>
+                            <div class="step"><span class="step-num">1</span><span>استلقي على البنش مع إمساك الدامبل</span></div>
+                            <div class="step"><span class="step-num">2</span><span>ارفعي الدامبل فوق صدرك</span></div>
+                            <div class="step"><span class="step-num">3</span><span>انزلي ببطء ثم ادفعي للأعلى</span></div>
                         </div>
-                        <div class="safety-note">
-                            <span>⚠️</span>
-                            <span>ابدئي بأوزان خفيفة (2-4 كجم)، لا تقوسي ظهرك</span>
-                        </div>
+                        <div class="safety-note"><span>⚠️</span><span>ابدئي بأوزان خفيفة (2-4 كجم)</span></div>
                     </div>
                 </div>
 
                 <!-- Exercise 2: Cable Row -->
                 <div class="exercise-card" data-id="d1-e2">
-                    <div class="exercise-visual">
-                        <div class="muscle-indicator">🔙 ظهر</div>
-                        <div class="illustration">
-                            <span class="exercise-icon">🚣‍♀️</span>
-                            <span class="exercise-label">سحب أرضي بالكيبل</span>
-                        </div>
+                    <div class="exercise-gif">
+                        <div class="muscle-badge">🔙 ظهر</div>
+                        <img src="https://fitnessprogramer.com/wp-content/uploads/2021/02/Seated-Cable-Row.gif" alt="Seated Cable Row" onerror="this.src='https://www.jefit.com/images/exercises/800_600/97.gif'">
                     </div>
                     <div class="exercise-body">
                         <div class="exercise-top">
@@ -848,38 +537,19 @@
                         </div>
                         <div class="exercise-steps">
                             <h5>📋 خطوات التنفيذ:</h5>
-                            <div class="step">
-                                <span class="step-num">1</span>
-                                <span>اجلسي على الجهاز مع ثني الركبتين قليلاً</span>
-                            </div>
-                            <div class="step">
-                                <span class="step-num">2</span>
-                                <span>أمسكي المقبض وافردي ظهرك</span>
-                            </div>
-                            <div class="step">
-                                <span class="step-num">3</span>
-                                <span>اسحبي نحو بطنك مع ضغط عضلات الظهر</span>
-                            </div>
-                            <div class="step">
-                                <span class="step-num">4</span>
-                                <span>ارجعي ببطء للوضع الأول</span>
-                            </div>
+                            <div class="step"><span class="step-num">1</span><span>اجلسي مستقيمة على الجهاز</span></div>
+                            <div class="step"><span class="step-num">2</span><span>اسحبي المقبض نحو بطنك</span></div>
+                            <div class="step"><span class="step-num">3</span><span>اضغطي عضلات الظهر ثم ارجعي</span></div>
                         </div>
-                        <div class="safety-note">
-                            <span>⚠️</span>
-                            <span>لا تميلي للخلف أثناء السحب - حافظي على ظهرك مستقيم</span>
-                        </div>
+                        <div class="safety-note"><span>⚠️</span><span>حافظي على ظهرك مستقيم</span></div>
                     </div>
                 </div>
 
                 <!-- Exercise 3: Lateral Raise -->
                 <div class="exercise-card" data-id="d1-e3">
-                    <div class="exercise-visual">
-                        <div class="muscle-indicator">🙆 كتف</div>
-                        <div class="illustration">
-                            <span class="exercise-icon">🤸‍♀️</span>
-                            <span class="exercise-label">رفع جانبي للكتف</span>
-                        </div>
+                    <div class="exercise-gif">
+                        <div class="muscle-badge">🙆 كتف</div>
+                        <img src="https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Lateral-Raise.gif" alt="Lateral Raise" onerror="this.src='https://www.jefit.com/images/exercises/800_600/116.gif'">
                     </div>
                     <div class="exercise-body">
                         <div class="exercise-top">
@@ -894,34 +564,18 @@
                         </div>
                         <div class="exercise-steps">
                             <h5>📋 خطوات التنفيذ:</h5>
-                            <div class="step">
-                                <span class="step-num">1</span>
-                                <span>قفي مستقيمة مع دامبل خفيف في كل يد</span>
-                            </div>
-                            <div class="step">
-                                <span class="step-num">2</span>
-                                <span>ارفعي الذراعين للجانبين حتى مستوى الكتف</span>
-                            </div>
-                            <div class="step">
-                                <span class="step-num">3</span>
-                                <span>ثبتي لثانية ثم انزلي ببطء</span>
-                            </div>
-                        </div>
-                        <div class="safety-note">
-                            <span>⚠️</span>
-                            <span>استخدمي أوزان خفيفة جداً (1-2 كجم)</span>
+                            <div class="step"><span class="step-num">1</span><span>قفي مستقيمة مع دامبل خفيف</span></div>
+                            <div class="step"><span class="step-num">2</span><span>ارفعي للجانبين حتى مستوى الكتف</span></div>
+                            <div class="step"><span class="step-num">3</span><span>انزلي ببطء وكرري</span></div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Exercise 4: Bicep Curl -->
                 <div class="exercise-card" data-id="d1-e4">
-                    <div class="exercise-visual">
-                        <div class="muscle-indicator">💪 باي</div>
-                        <div class="illustration">
-                            <span class="exercise-icon">💪</span>
-                            <span class="exercise-label">بايسبس دامبل</span>
-                        </div>
+                    <div class="exercise-gif">
+                        <div class="muscle-badge">💪 باي</div>
+                        <img src="https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Curl.gif" alt="Bicep Curl" onerror="this.src='https://www.jefit.com/images/exercises/800_600/9.gif'">
                     </div>
                     <div class="exercise-body">
                         <div class="exercise-top">
@@ -936,34 +590,18 @@
                         </div>
                         <div class="exercise-steps">
                             <h5>📋 خطوات التنفيذ:</h5>
-                            <div class="step">
-                                <span class="step-num">1</span>
-                                <span>قفي مستقيمة مع الدامبل على جانبيك</span>
-                            </div>
-                            <div class="step">
-                                <span class="step-num">2</span>
-                                <span>ثبتي الكوع على جانبك</span>
-                            </div>
-                            <div class="step">
-                                <span class="step-num">3</span>
-                                <span>ارفعي الدامبل نحو كتفك ببطء</span>
-                            </div>
-                            <div class="step">
-                                <span class="step-num">4</span>
-                                <span>انزلي ببطء مع التحكم</span>
-                            </div>
+                            <div class="step"><span class="step-num">1</span><span>قفي مع الدامبل على جانبيك</span></div>
+                            <div class="step"><span class="step-num">2</span><span>ثبتي الكوع وارفعي للكتف</span></div>
+                            <div class="step"><span class="step-num">3</span><span>انزلي ببطء مع التحكم</span></div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Exercise 5: Tricep Pushdown -->
                 <div class="exercise-card" data-id="d1-e5">
-                    <div class="exercise-visual">
-                        <div class="muscle-indicator">💪 تراي</div>
-                        <div class="illustration">
-                            <span class="exercise-icon">🔻</span>
-                            <span class="exercise-label">ترايسبس بالحبل</span>
-                        </div>
+                    <div class="exercise-gif">
+                        <div class="muscle-badge">💪 تراي</div>
+                        <img src="https://fitnessprogramer.com/wp-content/uploads/2021/02/Pushdown.gif" alt="Tricep Pushdown" onerror="this.src='https://www.jefit.com/images/exercises/800_600/92.gif'">
                     </div>
                     <div class="exercise-body">
                         <div class="exercise-top">
@@ -978,22 +616,9 @@
                         </div>
                         <div class="exercise-steps">
                             <h5>📋 خطوات التنفيذ:</h5>
-                            <div class="step">
-                                <span class="step-num">1</span>
-                                <span>قفي أمام جهاز الكيبل</span>
-                            </div>
-                            <div class="step">
-                                <span class="step-num">2</span>
-                                <span>أمسكي الحبل مع تثبيت الكوع</span>
-                            </div>
-                            <div class="step">
-                                <span class="step-num">3</span>
-                                <span>ادفعي للأسفل حتى تفرد الذراع</span>
-                            </div>
-                            <div class="step">
-                                <span class="step-num">4</span>
-                                <span>اضغطي العضلة في الأسفل ثم ارجعي</span>
-                            </div>
+                            <div class="step"><span class="step-num">1</span><span>قفي أمام الكيبل وأمسكي الحبل</span></div>
+                            <div class="step"><span class="step-num">2</span><span>ادفعي للأسفل مع تثبيت الكوع</span></div>
+                            <div class="step"><span class="step-num">3</span><span>اضغطي العضلة في الأسفل</span></div>
                         </div>
                     </div>
                 </div>
@@ -1010,18 +635,15 @@
 
                 <!-- Exercise 1: Squat -->
                 <div class="exercise-card" data-id="d2-e1">
-                    <div class="exercise-visual">
-                        <div class="muscle-indicator">🦵 أرجل</div>
-                        <div class="illustration">
-                            <span class="exercise-icon">🏋️‍♀️</span>
-                            <span class="exercise-label">سكوات</span>
-                        </div>
+                    <div class="exercise-gif">
+                        <div class="muscle-badge">🦵 أرجل</div>
+                        <img src="https://fitnessprogramer.com/wp-content/uploads/2021/02/Goblet-Squat.gif" alt="Squat" onerror="this.src='https://www.jefit.com/images/exercises/800_600/57.gif'">
                     </div>
                     <div class="exercise-body">
                         <div class="exercise-top">
                             <div class="exercise-checkbox">✓</div>
                             <div class="exercise-info">
-                                <div class="exercise-name">سكوات <span class="exercise-name-en">Bodyweight Squat</span></div>
+                                <div class="exercise-name">سكوات <span class="exercise-name-en">Goblet Squat</span></div>
                             </div>
                         </div>
                         <div class="exercise-details">
@@ -1030,38 +652,19 @@
                         </div>
                         <div class="exercise-steps">
                             <h5>📋 خطوات التنفيذ:</h5>
-                            <div class="step">
-                                <span class="step-num">1</span>
-                                <span>قفي باتساع الكتفين</span>
-                            </div>
-                            <div class="step">
-                                <span class="step-num">2</span>
-                                <span>انزلي كأنك تجلسين على كرسي</span>
-                            </div>
-                            <div class="step">
-                                <span class="step-num">3</span>
-                                <span>حافظي على ظهرك مستقيم</span>
-                            </div>
-                            <div class="step">
-                                <span class="step-num">4</span>
-                                <span>ارجعي للوقوف مع الزفير</span>
-                            </div>
+                            <div class="step"><span class="step-num">1</span><span>قفي باتساع الكتفين</span></div>
+                            <div class="step"><span class="step-num">2</span><span>انزلي كأنك تجلسين على كرسي</span></div>
+                            <div class="step"><span class="step-num">3</span><span>ارجعي للوقوف مع الزفير</span></div>
                         </div>
-                        <div class="safety-note good">
-                            <span>✅</span>
-                            <span>آمن تمامًا بعد القيصرية - ابدئي بدون أوزان</span>
-                        </div>
+                        <div class="safety-note good"><span>✅</span><span>آمن بعد القيصرية - ابدئي بدون أوزان</span></div>
                     </div>
                 </div>
 
                 <!-- Exercise 2: Glute Bridge -->
                 <div class="exercise-card" data-id="d2-e2">
-                    <div class="exercise-visual">
-                        <div class="muscle-indicator">🍑 مؤخرة</div>
-                        <div class="illustration">
-                            <span class="exercise-icon">🌉</span>
-                            <span class="exercise-label">جسر المؤخرة</span>
-                        </div>
+                    <div class="exercise-gif">
+                        <div class="muscle-badge">🍑 مؤخرة</div>
+                        <img src="https://fitnessprogramer.com/wp-content/uploads/2021/02/Glute-Bridge.gif" alt="Glute Bridge" onerror="this.src='https://www.jefit.com/images/exercises/800_600/244.gif'">
                     </div>
                     <div class="exercise-body">
                         <div class="exercise-top">
@@ -1076,44 +679,25 @@
                         </div>
                         <div class="exercise-steps">
                             <h5>📋 خطوات التنفيذ:</h5>
-                            <div class="step">
-                                <span class="step-num">1</span>
-                                <span>استلقي على ظهرك مع ثني الركبتين</span>
-                            </div>
-                            <div class="step">
-                                <span class="step-num">2</span>
-                                <span>ارفعي الحوض للأعلى</span>
-                            </div>
-                            <div class="step">
-                                <span class="step-num">3</span>
-                                <span>اضغطي المؤخرة في الأعلى</span>
-                            </div>
-                            <div class="step">
-                                <span class="step-num">4</span>
-                                <span>ثبتي ثانيتين ثم انزلي</span>
-                            </div>
+                            <div class="step"><span class="step-num">1</span><span>استلقي على ظهرك مع ثني الركبتين</span></div>
+                            <div class="step"><span class="step-num">2</span><span>ارفعي الحوض واضغطي المؤخرة</span></div>
+                            <div class="step"><span class="step-num">3</span><span>ثبتي ثانيتين ثم انزلي</span></div>
                         </div>
-                        <div class="safety-note good">
-                            <span>✅</span>
-                            <span>ممتاز بعد القيصرية! يقوي الحوض بدون ضغط على البطن</span>
-                        </div>
+                        <div class="safety-note good"><span>✅</span><span>ممتاز بعد القيصرية!</span></div>
                     </div>
                 </div>
 
-                <!-- Exercise 3: Hamstring Curl -->
+                <!-- Exercise 3: Leg Curl -->
                 <div class="exercise-card" data-id="d2-e3">
-                    <div class="exercise-visual">
-                        <div class="muscle-indicator">🦵 فخذ خلفي</div>
-                        <div class="illustration">
-                            <span class="exercise-icon">🦿</span>
-                            <span class="exercise-label">ثني الساق</span>
-                        </div>
+                    <div class="exercise-gif">
+                        <div class="muscle-badge">🦵 فخذ خلفي</div>
+                        <img src="https://fitnessprogramer.com/wp-content/uploads/2021/02/Leg-Curl.gif" alt="Leg Curl" onerror="this.src='https://www.jefit.com/images/exercises/800_600/151.gif'">
                     </div>
                     <div class="exercise-body">
                         <div class="exercise-top">
                             <div class="exercise-checkbox">✓</div>
                             <div class="exercise-info">
-                                <div class="exercise-name">ثني الساق <span class="exercise-name-en">Hamstring Curl</span></div>
+                                <div class="exercise-name">ثني الساق <span class="exercise-name-en">Leg Curl</span></div>
                             </div>
                         </div>
                         <div class="exercise-details">
@@ -1122,34 +706,18 @@
                         </div>
                         <div class="exercise-steps">
                             <h5>📋 خطوات التنفيذ:</h5>
-                            <div class="step">
-                                <span class="step-num">1</span>
-                                <span>استلقي على جهاز ثني الساق</span>
-                            </div>
-                            <div class="step">
-                                <span class="step-num">2</span>
-                                <span>ضعي الوسادة خلف الكاحل</span>
-                            </div>
-                            <div class="step">
-                                <span class="step-num">3</span>
-                                <span>اثني الركبة لرفع الوزن</span>
-                            </div>
-                            <div class="step">
-                                <span class="step-num">4</span>
-                                <span>انزلي ببطء وتحكم</span>
-                            </div>
+                            <div class="step"><span class="step-num">1</span><span>استلقي على جهاز ثني الساق</span></div>
+                            <div class="step"><span class="step-num">2</span><span>اثني ركبتيك لرفع الوزن</span></div>
+                            <div class="step"><span class="step-num">3</span><span>انزلي ببطء وتحكم</span></div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Exercise 4: Leg Extension -->
                 <div class="exercise-card" data-id="d2-e4">
-                    <div class="exercise-visual">
-                        <div class="muscle-indicator">🦵 فخذ أمامي</div>
-                        <div class="illustration">
-                            <span class="exercise-icon">🦶</span>
-                            <span class="exercise-label">فرد الساق</span>
-                        </div>
+                    <div class="exercise-gif">
+                        <div class="muscle-badge">🦵 فخذ أمامي</div>
+                        <img src="https://fitnessprogramer.com/wp-content/uploads/2021/02/LEG-EXTENSION.gif" alt="Leg Extension" onerror="this.src='https://www.jefit.com/images/exercises/800_600/150.gif'">
                     </div>
                     <div class="exercise-body">
                         <div class="exercise-top">
@@ -1164,22 +732,9 @@
                         </div>
                         <div class="exercise-steps">
                             <h5>📋 خطوات التنفيذ:</h5>
-                            <div class="step">
-                                <span class="step-num">1</span>
-                                <span>اجلسي على الجهاز</span>
-                            </div>
-                            <div class="step">
-                                <span class="step-num">2</span>
-                                <span>ضعي الوسادة أمام الكاحل</span>
-                            </div>
-                            <div class="step">
-                                <span class="step-num">3</span>
-                                <span>افردي الساق للأعلى</span>
-                            </div>
-                            <div class="step">
-                                <span class="step-num">4</span>
-                                <span>اضغطي العضلة في الأعلى</span>
-                            </div>
+                            <div class="step"><span class="step-num">1</span><span>اجلسي على الجهاز</span></div>
+                            <div class="step"><span class="step-num">2</span><span>افردي ساقيك للأعلى</span></div>
+                            <div class="step"><span class="step-num">3</span><span>اضغطي العضلة وانزلي</span></div>
                         </div>
                     </div>
                 </div>
@@ -1196,12 +751,9 @@
 
                 <!-- Exercise 1: Modified Plank -->
                 <div class="exercise-card" data-id="d3-e1">
-                    <div class="exercise-visual">
-                        <div class="muscle-indicator">🎯 كور</div>
-                        <div class="illustration">
-                            <span class="exercise-icon">📐</span>
-                            <span class="exercise-label">بلانك معدّل</span>
-                        </div>
+                    <div class="exercise-gif">
+                        <div class="muscle-badge">🎯 كور</div>
+                        <img src="https://fitnessprogramer.com/wp-content/uploads/2021/02/Plank.gif" alt="Plank" onerror="this.src='https://www.jefit.com/images/exercises/800_600/209.gif'">
                     </div>
                     <div class="exercise-body">
                         <div class="exercise-top">
@@ -1216,38 +768,19 @@
                         </div>
                         <div class="exercise-steps">
                             <h5>📋 خطوات التنفيذ:</h5>
-                            <div class="step">
-                                <span class="step-num">1</span>
-                                <span>انزلي على الركبتين والساعدين</span>
-                            </div>
-                            <div class="step">
-                                <span class="step-num">2</span>
-                                <span>حافظي على خط مستقيم من الرأس للركبة</span>
-                            </div>
-                            <div class="step">
-                                <span class="step-num">3</span>
-                                <span>شدي البطن برفق وتنفسي</span>
-                            </div>
-                            <div class="step">
-                                <span class="step-num">4</span>
-                                <span>ثبتي للوقت المطلوب</span>
-                            </div>
+                            <div class="step"><span class="step-num">1</span><span>انزلي على الركبتين والساعدين</span></div>
+                            <div class="step"><span class="step-num">2</span><span>حافظي على خط مستقيم</span></div>
+                            <div class="step"><span class="step-num">3</span><span>شدي البطن وتنفسي</span></div>
                         </div>
-                        <div class="safety-note good">
-                            <span>✅</span>
-                            <span>النسخة المعدّلة على الركبتين آمنة بعد القيصرية</span>
-                        </div>
+                        <div class="safety-note good"><span>✅</span><span>على الركبتين = آمن بعد القيصرية</span></div>
                     </div>
                 </div>
 
                 <!-- Exercise 2: Bird Dog -->
                 <div class="exercise-card" data-id="d3-e2">
-                    <div class="exercise-visual">
-                        <div class="muscle-indicator">🎯 كور + توازن</div>
-                        <div class="illustration">
-                            <span class="exercise-icon">🐕</span>
-                            <span class="exercise-label">بيرد دوق</span>
-                        </div>
+                    <div class="exercise-gif">
+                        <div class="muscle-badge">🎯 كور + توازن</div>
+                        <img src="https://fitnessprogramer.com/wp-content/uploads/2021/02/Bird-Dog.gif" alt="Bird Dog" onerror="this.src='https://www.jefit.com/images/exercises/800_600/298.gif'">
                     </div>
                     <div class="exercise-body">
                         <div class="exercise-top">
@@ -1262,38 +795,19 @@
                         </div>
                         <div class="exercise-steps">
                             <h5>📋 خطوات التنفيذ:</h5>
-                            <div class="step">
-                                <span class="step-num">1</span>
-                                <span>انزلي على اليدين والركبتين</span>
-                            </div>
-                            <div class="step">
-                                <span class="step-num">2</span>
-                                <span>مدي الذراع اليمنى والساق اليسرى معًا</span>
-                            </div>
-                            <div class="step">
-                                <span class="step-num">3</span>
-                                <span>ثبتي لثانيتين</span>
-                            </div>
-                            <div class="step">
-                                <span class="step-num">4</span>
-                                <span>بدّلي الجانب</span>
-                            </div>
+                            <div class="step"><span class="step-num">1</span><span>على اليدين والركبتين</span></div>
+                            <div class="step"><span class="step-num">2</span><span>مدي الذراع والساق المعاكسين</span></div>
+                            <div class="step"><span class="step-num">3</span><span>ثبتي وبدّلي الجانب</span></div>
                         </div>
-                        <div class="safety-note good">
-                            <span>✅</span>
-                            <span>من أفضل التمارين بعد القيصرية - يقوي الكور بأمان</span>
-                        </div>
+                        <div class="safety-note good"><span>✅</span><span>من أفضل تمارين الكور بعد القيصرية</span></div>
                     </div>
                 </div>
 
                 <!-- Exercise 3: Dead Bug -->
                 <div class="exercise-card" data-id="d3-e3">
-                    <div class="exercise-visual">
-                        <div class="muscle-indicator">🎯 كور عميق</div>
-                        <div class="illustration">
-                            <span class="exercise-icon">🐛</span>
-                            <span class="exercise-label">ديد بق</span>
-                        </div>
+                    <div class="exercise-gif">
+                        <div class="muscle-badge">🎯 كور عميق</div>
+                        <img src="https://fitnessprogramer.com/wp-content/uploads/2021/02/Dead-Bug.gif" alt="Dead Bug" onerror="this.src='https://www.jefit.com/images/exercises/800_600/298.gif'">
                     </div>
                     <div class="exercise-body">
                         <div class="exercise-top">
@@ -1308,38 +822,19 @@
                         </div>
                         <div class="exercise-steps">
                             <h5>📋 خطوات التنفيذ:</h5>
-                            <div class="step">
-                                <span class="step-num">1</span>
-                                <span>استلقي على ظهرك، ارفعي الذراعين والساقين</span>
-                            </div>
-                            <div class="step">
-                                <span class="step-num">2</span>
-                                <span>اضغطي أسفل ظهرك على الأرض</span>
-                            </div>
-                            <div class="step">
-                                <span class="step-num">3</span>
-                                <span>أنزلي الذراع والساق المعاكسين ببطء</span>
-                            </div>
-                            <div class="step">
-                                <span class="step-num">4</span>
-                                <span>ارجعي وبدّلي</span>
-                            </div>
+                            <div class="step"><span class="step-num">1</span><span>استلقي ورفعي الذراعين والساقين</span></div>
+                            <div class="step"><span class="step-num">2</span><span>اضغطي أسفل ظهرك على الأرض</span></div>
+                            <div class="step"><span class="step-num">3</span><span>أنزلي ذراع وساق معاكسين</span></div>
                         </div>
-                        <div class="safety-note good">
-                            <span>✅</span>
-                            <span>ممتاز للكور العميق - يحمي الظهر أثناء التمرين</span>
-                        </div>
+                        <div class="safety-note good"><span>✅</span><span>يحمي الظهر أثناء تقوية الكور</span></div>
                     </div>
                 </div>
 
                 <!-- Exercise 4: Cardio -->
                 <div class="exercise-card" data-id="d3-e4">
-                    <div class="exercise-visual">
-                        <div class="muscle-indicator">❤️ قلب</div>
-                        <div class="illustration">
-                            <span class="exercise-icon">🚶‍♀️</span>
-                            <span class="exercise-label">كارديو خفيف</span>
-                        </div>
+                    <div class="exercise-gif">
+                        <div class="muscle-badge">❤️ قلب</div>
+                        <img src="https://fitnessprogramer.com/wp-content/uploads/2021/02/Walking.gif" alt="Cardio" onerror="this.src='https://www.jefit.com/images/exercises/800_600/374.gif'">
                     </div>
                     <div class="exercise-body">
                         <div class="exercise-top">
@@ -1351,17 +846,13 @@
                         <div class="exercise-details">
                             <span class="exercise-tag reps">15-20 دقيقة</span>
                         </div>
-                        <div class="exercise-instructions">
-                            <strong>اختاري واحد:</strong><br>
-                            🚶 مشي سريع على السير<br>
-                            🚴 دراجة ثابتة<br>
-                            ⭕ إليبتيكال<br><br>
-                            <strong>الهدف:</strong> نبض معتدل، تقدرين تتكلمين أثناء التمرين
+                        <div class="exercise-steps">
+                            <h5>📋 اختاري واحد:</h5>
+                            <div class="step"><span class="step-num">🚶</span><span>مشي سريع على السير</span></div>
+                            <div class="step"><span class="step-num">🚴</span><span>دراجة ثابتة</span></div>
+                            <div class="step"><span class="step-num">⭕</span><span>إليبتيكال</span></div>
                         </div>
-                        <div class="safety-note">
-                            <span>💡</span>
-                            <span>يفضل التمرين بعد الرضاعة مباشرة</span>
-                        </div>
+                        <div class="safety-note"><span>💡</span><span>يفضل التمرين بعد الرضاعة</span></div>
                     </div>
                 </div>
 
@@ -1370,134 +861,78 @@
         </div>
     </section>
 
-    <!-- Progress Section -->
+    <!-- Progress -->
     <section class="section progress-section">
         <div class="container">
             <h2 class="section-title">🏆 تقدمك وإنجازاتك</h2>
-            
             <div class="streak-card">
                 <div class="streak-stars" id="streakStars">☆☆☆</div>
                 <div class="streak-level" id="streakLevel">ابدئي رحلتك!</div>
             </div>
-
-            <div class="weeks-history" id="weeksHistory">
-                <h4>📊 سجل الأسابيع</h4>
-            </div>
-
+            <div class="weeks-history" id="weeksHistory"><h4>📊 سجل الأسابيع</h4></div>
             <h4 style="text-align: center; margin: 20px 0 10px;">🎖️ الإنجازات</h4>
             <div class="badges-grid">
-                <div class="badge" data-badge="first-workout">
-                    <div class="icon">🌟</div>
-                    <div class="name">أول تمرين</div>
-                </div>
-                <div class="badge" data-badge="first-week">
-                    <div class="icon">🔥</div>
-                    <div class="name">أول أسبوع</div>
-                </div>
-                <div class="badge" data-badge="consistency">
-                    <div class="icon">👑</div>
-                    <div class="name">الاستمرارية</div>
-                </div>
-                <div class="badge" data-badge="strong-mom">
-                    <div class="icon">💪</div>
-                    <div class="name">أم قوية</div>
-                </div>
-                <div class="badge" data-badge="four-weeks">
-                    <div class="icon">🏆</div>
-                    <div class="name">شهر كامل</div>
-                </div>
-                <div class="badge" data-badge="superstar">
-                    <div class="icon">⭐</div>
-                    <div class="name">نجمة</div>
-                </div>
+                <div class="badge" data-badge="first-workout"><div class="icon">🌟</div><div class="name">أول تمرين</div></div>
+                <div class="badge" data-badge="first-week"><div class="icon">🔥</div><div class="name">أول أسبوع</div></div>
+                <div class="badge" data-badge="consistency"><div class="icon">👑</div><div class="name">الاستمرارية</div></div>
+                <div class="badge" data-badge="strong-mom"><div class="icon">💪</div><div class="name">أم قوية</div></div>
+                <div class="badge" data-badge="four-weeks"><div class="icon">🏆</div><div class="name">شهر كامل</div></div>
+                <div class="badge" data-badge="superstar"><div class="icon">⭐</div><div class="name">نجمة</div></div>
             </div>
         </div>
     </section>
 
-    <!-- Backup Section -->
+    <!-- Backup -->
     <div class="backup-section">
         <h3>💾 حفظ التقدم</h3>
         <div class="backup-code-display">
-            <p>كود الاستعادة الخاص بك (احفظيه في مكان آمن):</p>
+            <p>كود الاستعادة (احفظيه في مكان آمن):</p>
             <div class="backup-code" id="backupCode">----</div>
         </div>
         <div class="backup-btns">
-            <button class="backup-btn copy" onclick="copyCode()">📋 نسخ الكود</button>
+            <button class="backup-btn copy" onclick="copyCode()">📋 نسخ</button>
             <button class="backup-btn restore" onclick="showRestore()">🔄 استعادة</button>
             <button class="backup-btn reset" onclick="resetProgress()">🗑️ حذف</button>
         </div>
         <div class="restore-input" id="restoreInput">
-            <input type="text" id="restoreCode" placeholder="الصقي كود الاستعادة هنا">
-            <button onclick="restoreFromCode()">استعادة البيانات</button>
+            <input type="text" id="restoreCode" placeholder="الصقي كود الاستعادة">
+            <button onclick="restoreFromCode()">استعادة</button>
         </div>
     </div>
 
-    <!-- Safety Notes -->
+    <!-- Notes -->
     <div class="notes-section">
         <h3 style="text-align: center; margin-bottom: 15px;">⚠️ ملاحظات السلامة</h3>
-        <div class="note-item">
-            <span>🛑</span>
-            <p>توقفي فورًا عند أي ألم في منطقة القيصرية</p>
-        </div>
-        <div class="note-item">
-            <span>💧</span>
-            <p>اشربي ماء كافي قبل وبعد التمرين</p>
-        </div>
-        <div class="note-item">
-            <span>🤱</span>
-            <p>يفضل التمرين بعد الرضاعة مباشرة</p>
-        </div>
-        <div class="note-item">
-            <span>🚫</span>
-            <p>لا تمارين بطن تقليدية (كرانشز)</p>
-        </div>
-        <div class="note-item">
-            <span>👩‍⚕️</span>
-            <p>استشيري الطبيب في حال وجود ألم مستمر</p>
-        </div>
+        <div class="note-item"><span>🛑</span><p>توقفي فورًا عند أي ألم</p></div>
+        <div class="note-item"><span>💧</span><p>اشربي ماء كافي</p></div>
+        <div class="note-item"><span>🤱</span><p>يفضل التمرين بعد الرضاعة</p></div>
+        <div class="note-item"><span>🚫</span><p>لا كرانشز تقليدية</p></div>
     </div>
 
     <!-- Footer -->
     <footer class="footer">
-        <p class="disclaimer">⚠️ هذا البرنامج للإرشاد العام فقط. استشيري طبيبك قبل البدء.</p>
+        <p class="disclaimer">⚠️ استشيري طبيبك قبل البدء</p>
         <p class="support-msg">جسمك قوي… فقط يحتاج وقت وصبر 🤍</p>
     </footer>
 
-    <!-- Toast -->
     <div class="toast" id="toast"></div>
 
     <script>
-        // App Data
-        let appData = JSON.parse(localStorage.getItem('postpartumFitnessV3')) || {
-            currentWeek: 1,
-            weeks: {},
-            exercises: {},
-            totalWorkouts: 0,
-            badges: [],
-            currentStreak: 0,
-            lastWorkoutDate: null
+        let appData = JSON.parse(localStorage.getItem('postpartumFitnessV4')) || {
+            currentWeek: 1, weeks: {}, exercises: {}, totalWorkouts: 0,
+            badges: [], currentStreak: 0, lastWorkoutDate: null
         };
 
-        // Generate backup code
         function generateCode() {
-            const data = {
-                w: appData.currentWeek,
-                t: appData.totalWorkouts,
-                s: appData.currentStreak,
-                b: appData.badges,
-                wk: appData.weeks,
-                d: appData.lastWorkoutDate
-            };
+            const data = { w: appData.currentWeek, t: appData.totalWorkouts, s: appData.currentStreak, b: appData.badges, wk: appData.weeks, d: appData.lastWorkoutDate };
             return btoa(unescape(encodeURIComponent(JSON.stringify(data))));
         }
 
-        // Save data
         function saveData() {
-            localStorage.setItem('postpartumFitnessV3', JSON.stringify(appData));
+            localStorage.setItem('postpartumFitnessV4', JSON.stringify(appData));
             document.getElementById('backupCode').textContent = generateCode();
         }
 
-        // Show toast
         function showToast(msg) {
             const toast = document.getElementById('toast');
             toast.textContent = msg;
@@ -1505,237 +940,113 @@
             setTimeout(() => toast.classList.remove('show'), 2500);
         }
 
-        // Change week
         function changeWeek(delta) {
             const newWeek = appData.currentWeek + delta;
-            if (newWeek >= 1 && newWeek <= 12) {
-                appData.currentWeek = newWeek;
-                saveData();
-                updateUI();
-            }
+            if (newWeek >= 1 && newWeek <= 12) { appData.currentWeek = newWeek; saveData(); updateUI(); }
         }
 
-        // Scroll to schedule
-        function scrollToSchedule() {
-            document.getElementById('schedule').scrollIntoView({ behavior: 'smooth' });
-        }
+        function scrollToSchedule() { document.getElementById('schedule').scrollIntoView({ behavior: 'smooth' }); }
 
-        // Copy code
         function copyCode() {
-            const code = document.getElementById('backupCode').textContent;
-            navigator.clipboard.writeText(code).then(() => {
-                showToast('✅ تم نسخ الكود!');
-            }).catch(() => {
-                showToast('حددي الكود وانسخيه يدويًا');
-            });
+            navigator.clipboard.writeText(document.getElementById('backupCode').textContent)
+                .then(() => showToast('✅ تم نسخ الكود!')).catch(() => showToast('حددي الكود وانسخيه'));
         }
 
-        // Show restore
-        function showRestore() {
-            document.getElementById('restoreInput').classList.toggle('show');
-        }
+        function showRestore() { document.getElementById('restoreInput').classList.toggle('show'); }
 
-        // Restore from code
         function restoreFromCode() {
             const code = document.getElementById('restoreCode').value.trim();
-            if (code.length > 0) {
+            if (code) {
                 try {
-                    const decoded = decodeURIComponent(escape(atob(code)));
-                    const data = JSON.parse(decoded);
-                    appData.currentWeek = data.w || 1;
-                    appData.totalWorkouts = data.t || 0;
-                    appData.currentStreak = data.s || 0;
-                    appData.badges = data.b || [];
-                    appData.weeks = data.wk || {};
-                    appData.lastWorkoutDate = data.d || null;
-                    saveData();
-                    updateUI();
-                    showToast('✅ تم استعادة البيانات!');
+                    const data = JSON.parse(decodeURIComponent(escape(atob(code))));
+                    Object.assign(appData, { currentWeek: data.w||1, totalWorkouts: data.t||0, currentStreak: data.s||0, badges: data.b||[], weeks: data.wk||{}, lastWorkoutDate: data.d });
+                    saveData(); updateUI(); showToast('✅ تم استعادة البيانات!');
                     document.getElementById('restoreInput').classList.remove('show');
-                } catch (e) {
-                    showToast('❌ كود غير صحيح');
-                }
+                } catch { showToast('❌ كود غير صحيح'); }
             }
         }
 
-        // Reset
-        function resetProgress() {
-            if (confirm('هل أنتِ متأكدة؟ سيتم حذف كل التقدم!')) {
-                localStorage.removeItem('postpartumFitnessV3');
-                location.reload();
-            }
-        }
+        function resetProgress() { if (confirm('حذف كل التقدم؟')) { localStorage.removeItem('postpartumFitnessV4'); location.reload(); } }
 
-        // Complete day
         function completeDay(dayNum) {
             const weekKey = `week${appData.currentWeek}`;
-            if (!appData.weeks[weekKey]) {
-                appData.weeks[weekKey] = { days: {} };
-            }
-            
-            if (appData.weeks[weekKey].days[dayNum]) {
-                showToast('هذا اليوم مكتمل بالفعل!');
-                return;
-            }
-
+            if (!appData.weeks[weekKey]) appData.weeks[weekKey] = { days: {} };
+            if (appData.weeks[weekKey].days[dayNum]) { showToast('مكتمل بالفعل!'); return; }
             appData.weeks[weekKey].days[dayNum] = true;
             appData.totalWorkouts++;
-
-            // Update streak
             const today = new Date().toDateString();
             if (appData.lastWorkoutDate !== today) {
-                const yesterday = new Date();
-                yesterday.setDate(yesterday.getDate() - 1);
-                if (appData.lastWorkoutDate === yesterday.toDateString() || !appData.lastWorkoutDate) {
-                    appData.currentStreak++;
-                } else {
-                    appData.currentStreak = 1;
-                }
+                const yesterday = new Date(); yesterday.setDate(yesterday.getDate() - 1);
+                appData.currentStreak = (appData.lastWorkoutDate === yesterday.toDateString() || !appData.lastWorkoutDate) ? appData.currentStreak + 1 : 1;
                 appData.lastWorkoutDate = today;
             }
-
-            checkBadges();
-            saveData();
-            updateUI();
-            showToast('🎉 أحسنتِ! استمري!');
+            checkBadges(); saveData(); updateUI(); showToast('🎉 أحسنتِ!');
         }
 
-        // Check badges
         function checkBadges() {
-            if (appData.totalWorkouts >= 1 && !appData.badges.includes('first-workout')) {
-                appData.badges.push('first-workout');
-            }
-            if (appData.totalWorkouts >= 3 && !appData.badges.includes('first-week')) {
-                appData.badges.push('first-week');
-            }
-            if (appData.currentStreak >= 5 && !appData.badges.includes('consistency')) {
-                appData.badges.push('consistency');
-            }
-            if (appData.totalWorkouts >= 9 && !appData.badges.includes('strong-mom')) {
-                appData.badges.push('strong-mom');
-            }
-            if (appData.totalWorkouts >= 12 && !appData.badges.includes('four-weeks')) {
-                appData.badges.push('four-weeks');
-            }
-            if (appData.totalWorkouts >= 20 && !appData.badges.includes('superstar')) {
-                appData.badges.push('superstar');
-            }
+            if (appData.totalWorkouts >= 1 && !appData.badges.includes('first-workout')) appData.badges.push('first-workout');
+            if (appData.totalWorkouts >= 3 && !appData.badges.includes('first-week')) appData.badges.push('first-week');
+            if (appData.currentStreak >= 5 && !appData.badges.includes('consistency')) appData.badges.push('consistency');
+            if (appData.totalWorkouts >= 9 && !appData.badges.includes('strong-mom')) appData.badges.push('strong-mom');
+            if (appData.totalWorkouts >= 12 && !appData.badges.includes('four-weeks')) appData.badges.push('four-weeks');
+            if (appData.totalWorkouts >= 20 && !appData.badges.includes('superstar')) appData.badges.push('superstar');
         }
 
-        // Count completed weeks
         function countCompletedWeeks() {
-            let count = 0;
-            Object.keys(appData.weeks).forEach(weekKey => {
-                const week = appData.weeks[weekKey];
-                if (week.days && Object.keys(week.days).length === 3) {
-                    count++;
-                }
-            });
-            return count;
+            return Object.values(appData.weeks).filter(w => w.days && Object.keys(w.days).length === 3).length;
         }
 
-        // Update UI
         function updateUI() {
-            // Stats
             document.getElementById('totalWeeks').textContent = countCompletedWeeks();
             document.getElementById('totalWorkouts').textContent = appData.totalWorkouts;
             document.getElementById('currentStreak').textContent = appData.currentStreak;
             document.getElementById('badgesCount').textContent = appData.badges.length;
-
-            // Week number
             document.getElementById('weekNumber').textContent = appData.currentWeek;
 
-            // Week progress dots
             let dotsHTML = '';
             for (let i = 1; i <= 8; i++) {
-                const weekKey = `week${i}`;
-                const week = appData.weeks[weekKey];
-                const isCompleted = week && week.days && Object.keys(week.days).length === 3;
-                const isCurrent = i === appData.currentWeek;
-                dotsHTML += `<div class="week-dot ${isCompleted ? 'completed' : ''} ${isCurrent ? 'current' : ''}"></div>`;
+                const week = appData.weeks[`week${i}`];
+                const done = week && week.days && Object.keys(week.days).length === 3;
+                dotsHTML += `<div class="week-dot ${done ? 'completed' : ''} ${i === appData.currentWeek ? 'current' : ''}"></div>`;
             }
             document.getElementById('weekProgress').innerHTML = dotsHTML;
 
-            // Day tabs status
             const currentWeekData = appData.weeks[`week${appData.currentWeek}`] || { days: {} };
             for (let d = 1; d <= 3; d++) {
                 const tab = document.querySelector(`.day-tab[data-day="${d}"]`);
                 const btn = document.querySelector(`.complete-day-btn[data-day="${d}"]`);
                 if (currentWeekData.days[d]) {
-                    tab.classList.add('done');
-                    btn.classList.add('completed');
-                    btn.textContent = '✓ مكتمل';
-                    btn.disabled = true;
+                    tab.classList.add('done'); btn.classList.add('completed'); btn.textContent = '✓ مكتمل'; btn.disabled = true;
                 } else {
-                    tab.classList.remove('done');
-                    btn.classList.remove('completed');
-                    btn.textContent = `✓ أكملت تمارين اليوم`;
-                    btn.disabled = false;
+                    tab.classList.remove('done'); btn.classList.remove('completed'); btn.textContent = '✓ أكملت التمارين'; btn.disabled = false;
                 }
             }
 
-            // Exercise checkboxes
             document.querySelectorAll('.exercise-card').forEach(card => {
-                const id = card.dataset.id;
-                const key = `week${appData.currentWeek}-${id}`;
-                if (appData.exercises[key]) {
-                    card.classList.add('completed');
-                } else {
-                    card.classList.remove('completed');
-                }
+                const key = `week${appData.currentWeek}-${card.dataset.id}`;
+                card.classList.toggle('completed', !!appData.exercises[key]);
             });
 
-            // Streak display
-            const streak = appData.currentStreak;
-            const starsEl = document.getElementById('streakStars');
-            const levelEl = document.getElementById('streakLevel');
-            if (streak >= 9) {
-                starsEl.textContent = '⭐⭐⭐';
-                levelEl.textContent = 'رائعة! نجمة ذهبية!';
-            } else if (streak >= 6) {
-                starsEl.textContent = '⭐⭐☆';
-                levelEl.textContent = 'نجمة فضية!';
-            } else if (streak >= 3) {
-                starsEl.textContent = '⭐☆☆';
-                levelEl.textContent = 'نجمة برونزية!';
-            } else {
-                starsEl.textContent = '☆☆☆';
-                levelEl.textContent = 'ابدئي رحلتك!';
-            }
+            const s = appData.currentStreak;
+            document.getElementById('streakStars').textContent = s >= 9 ? '⭐⭐⭐' : s >= 6 ? '⭐⭐☆' : s >= 3 ? '⭐☆☆' : '☆☆☆';
+            document.getElementById('streakLevel').textContent = s >= 9 ? 'نجمة ذهبية!' : s >= 6 ? 'نجمة فضية!' : s >= 3 ? 'نجمة برونزية!' : 'ابدئي رحلتك!';
 
-            // Badges
-            appData.badges.forEach(b => {
-                const badge = document.querySelector(`.badge[data-badge="${b}"]`);
-                if (badge) badge.classList.add('unlocked');
-            });
+            appData.badges.forEach(b => { const el = document.querySelector(`.badge[data-badge="${b}"]`); if (el) el.classList.add('unlocked'); });
 
-            // Weeks history
             let historyHTML = '<h4>📊 سجل الأسابيع</h4>';
             for (let i = 1; i <= Math.max(appData.currentWeek, 4); i++) {
-                const weekKey = `week${i}`;
-                const week = appData.weeks[weekKey] || { days: {} };
-                historyHTML += `
-                    <div class="week-history-item">
-                        <span class="week-name">الأسبوع ${i}</span>
-                        <div class="week-status">
-                            <div class="day-indicator ${week.days[1] ? 'done' : ''}">1</div>
-                            <div class="day-indicator ${week.days[2] ? 'done' : ''}">2</div>
-                            <div class="day-indicator ${week.days[3] ? 'done' : ''}">3</div>
-                        </div>
-                    </div>
-                `;
+                const week = appData.weeks[`week${i}`] || { days: {} };
+                historyHTML += `<div class="week-history-item"><span class="week-name">الأسبوع ${i}</span><div class="week-status">
+                    <div class="day-indicator ${week.days[1] ? 'done' : ''}">1</div>
+                    <div class="day-indicator ${week.days[2] ? 'done' : ''}">2</div>
+                    <div class="day-indicator ${week.days[3] ? 'done' : ''}">3</div></div></div>`;
             }
             document.getElementById('weeksHistory').innerHTML = historyHTML;
-
-            // Backup code
             document.getElementById('backupCode').textContent = generateCode();
         }
 
-        // Event Listeners
         document.addEventListener('DOMContentLoaded', () => {
             updateUI();
-
-            // Day tabs
             document.querySelectorAll('.day-tab').forEach(tab => {
                 tab.addEventListener('click', () => {
                     document.querySelectorAll('.day-tab').forEach(t => t.classList.remove('active'));
@@ -1744,24 +1055,16 @@
                     document.getElementById(`day${tab.dataset.day}`).classList.add('active');
                 });
             });
-
-            // Exercise cards
             document.querySelectorAll('.exercise-card').forEach(card => {
                 card.addEventListener('click', (e) => {
-                    if (e.target.closest('.exercise-steps') || e.target.closest('.exercise-instructions')) return;
-                    const id = card.dataset.id;
-                    const key = `week${appData.currentWeek}-${id}`;
-                    const isCompleted = card.classList.toggle('completed');
-                    appData.exercises[key] = isCompleted;
+                    if (e.target.closest('.exercise-steps')) return;
+                    const key = `week${appData.currentWeek}-${card.dataset.id}`;
+                    appData.exercises[key] = card.classList.toggle('completed');
                     saveData();
                 });
             });
-
-            // Complete day buttons
             document.querySelectorAll('.complete-day-btn').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    completeDay(parseInt(btn.dataset.day));
-                });
+                btn.addEventListener('click', () => completeDay(parseInt(btn.dataset.day)));
             });
         });
     </script>
